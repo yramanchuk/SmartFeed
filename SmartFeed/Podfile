@@ -1,14 +1,19 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
+# platform :ios, '9.2'
 
 use_frameworks!
 
 target 'SmartFeed' do
     pod 'Realm', '0.98.5'
-    pod 'Alamofire', '3.3.0'
-    pod 'AlamofireObjectMapper', '2.1.2'
+    pod 'Alamofire', '~> 3.1.0'
+    pod 'AlamofireObjectMapper', '~> 2.0.0'
+    pod 'AlamofireImage', '~> 2.2.0'
+#    pod 'AlamofireNetworkActivityIndicator', '~> 1.0' #XCode 7.3
     pod 'ObjectMapper', '1.1.5'
-    pod 'DZReadability', '0.2.3'
+
+#obj-c libs https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html
+#    pod 'DZReadability', '0.2.3'
+#    pod 'HTMLReader', '0.9.5'
 end
 
 target 'SmartFeedTests' do
