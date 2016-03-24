@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  FeedDetailController
 //  SmartFeed
 //
 //  Created by Yury Ramanchuk on 3/24/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class FeedDetailController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 

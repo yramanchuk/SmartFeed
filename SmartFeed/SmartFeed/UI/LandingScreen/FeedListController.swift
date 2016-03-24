@@ -1,5 +1,5 @@
 //
-//  MasterViewController.swift
+//  FeedListController.swift
 //  SmartFeed
 //
 //  Created by Yury Ramanchuk on 3/24/16.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class FeedListController: UITableViewController {
 
-    var detailViewController: DetailViewController? = nil
+    var detailViewController: FeedDetailController? = nil
     var objects = [AnyObject]()
 
 
@@ -23,7 +23,7 @@ class MasterViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? FeedDetailController
         }
     }
 
@@ -49,7 +49,7 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! FeedDetailController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true

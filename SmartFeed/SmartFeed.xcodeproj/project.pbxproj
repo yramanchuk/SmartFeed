@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		A211193993F97DAF16DEB04A /* Pods_SmartFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C280389EBC5FE9FEAC85A6 /* Pods_SmartFeed.framework */; };
 		CB8B426A1CA4335200DEAAC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */; };
-		CB8B426C1CA4335200DEAAC7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B426B1CA4335200DEAAC7 /* MasterViewController.swift */; };
-		CB8B426E1CA4335200DEAAC7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B426D1CA4335200DEAAC7 /* DetailViewController.swift */; };
 		CB8B42711CA4335200DEAAC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8B426F1CA4335200DEAAC7 /* Main.storyboard */; };
 		CB8B42731CA4335200DEAAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8B42721CA4335200DEAAC7 /* Assets.xcassets */; };
 		CB8B42761CA4335200DEAAC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8B42741CA4335200DEAAC7 /* LaunchScreen.storyboard */; };
 		CB8B42811CA4335200DEAAC7 /* SmartFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B42801CA4335200DEAAC7 /* SmartFeedTests.swift */; };
 		CB8B428C1CA4335200DEAAC7 /* SmartFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B428B1CA4335200DEAAC7 /* SmartFeedUITests.swift */; };
+		CBDE98D41CA44EE8001B89F6 /* FeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98D11CA44EE8001B89F6 /* FeedListController.swift */; };
+		CBDE98D51CA44EE8001B89F6 /* FeedDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98D31CA44EE8001B89F6 /* FeedDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,6 @@
 		83C280389EBC5FE9FEAC85A6 /* Pods_SmartFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8B42661CA4335200DEAAC7 /* SmartFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB8B426B1CA4335200DEAAC7 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		CB8B426D1CA4335200DEAAC7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CB8B42701CA4335200DEAAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB8B42721CA4335200DEAAC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8B42751CA4335200DEAAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +50,8 @@
 		CB8B42871CA4335200DEAAC7 /* SmartFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8B428B1CA4335200DEAAC7 /* SmartFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFeedUITests.swift; sourceTree = "<group>"; };
 		CB8B428D1CA4335200DEAAC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBDE98D11CA44EE8001B89F6 /* FeedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedListController.swift; sourceTree = "<group>"; };
+		CBDE98D31CA44EE8001B89F6 /* FeedDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailController.swift; sourceTree = "<group>"; };
 		D20CE6A34BAE61D4135E32A0 /* Pods-SmartFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeed/Pods-SmartFeed.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,9 +123,8 @@
 		CB8B42681CA4335200DEAAC7 /* SmartFeed */ = {
 			isa = PBXGroup;
 			children = (
+				CBDE98CE1CA44EE8001B89F6 /* UI */,
 				CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */,
-				CB8B426B1CA4335200DEAAC7 /* MasterViewController.swift */,
-				CB8B426D1CA4335200DEAAC7 /* DetailViewController.swift */,
 				CB8B426F1CA4335200DEAAC7 /* Main.storyboard */,
 				CB8B42721CA4335200DEAAC7 /* Assets.xcassets */,
 				CB8B42741CA4335200DEAAC7 /* LaunchScreen.storyboard */,
@@ -150,6 +149,39 @@
 				CB8B428D1CA4335200DEAAC7 /* Info.plist */,
 			);
 			path = SmartFeedUITests;
+			sourceTree = "<group>";
+		};
+		CBDE98CE1CA44EE8001B89F6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CBDE98CF1CA44EE8001B89F6 /* BrowseWeb */,
+				CBDE98D01CA44EE8001B89F6 /* LandingScreen */,
+				CBDE98D21CA44EE8001B89F6 /* ReadFeed */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CBDE98CF1CA44EE8001B89F6 /* BrowseWeb */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BrowseWeb;
+			sourceTree = "<group>";
+		};
+		CBDE98D01CA44EE8001B89F6 /* LandingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CBDE98D11CA44EE8001B89F6 /* FeedListController.swift */,
+			);
+			path = LandingScreen;
+			sourceTree = "<group>";
+		};
+		CBDE98D21CA44EE8001B89F6 /* ReadFeed */ = {
+			isa = PBXGroup;
+			children = (
+				CBDE98D31CA44EE8001B89F6 /* FeedDetailController.swift */,
+			);
+			path = ReadFeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,8 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB8B426E1CA4335200DEAAC7 /* DetailViewController.swift in Sources */,
-				CB8B426C1CA4335200DEAAC7 /* MasterViewController.swift in Sources */,
+				CBDE98D51CA44EE8001B89F6 /* FeedDetailController.swift in Sources */,
+				CBDE98D41CA44EE8001B89F6 /* FeedListController.swift in Sources */,
 				CB8B426A1CA4335200DEAAC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
