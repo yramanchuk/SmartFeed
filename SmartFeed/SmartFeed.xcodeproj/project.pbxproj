@@ -14,6 +14,7 @@
 		CB8B42761CA4335200DEAAC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8B42741CA4335200DEAAC7 /* LaunchScreen.storyboard */; };
 		CB8B42811CA4335200DEAAC7 /* SmartFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B42801CA4335200DEAAC7 /* SmartFeedTests.swift */; };
 		CB8B428C1CA4335200DEAAC7 /* SmartFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B428B1CA4335200DEAAC7 /* SmartFeedUITests.swift */; };
+		CBAB29C61CA47D450079F566 /* SFFeedDetailListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB29C51CA47D450079F566 /* SFFeedDetailListController.swift */; };
 		CBDE98D41CA44EE8001B89F6 /* SFFeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98D11CA44EE8001B89F6 /* SFFeedListController.swift */; };
 		CBDE98D51CA44EE8001B89F6 /* SFArticleDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98D31CA44EE8001B89F6 /* SFArticleDetailController.swift */; };
 		CBDE98DB1CA465C5001B89F6 /* SFArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98DA1CA465C5001B89F6 /* SFArticle.swift */; };
@@ -53,6 +54,7 @@
 		CB8B42871CA4335200DEAAC7 /* SmartFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8B428B1CA4335200DEAAC7 /* SmartFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFeedUITests.swift; sourceTree = "<group>"; };
 		CB8B428D1CA4335200DEAAC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBAB29C51CA47D450079F566 /* SFFeedDetailListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedDetailListController.swift; sourceTree = "<group>"; };
 		CBDE98D11CA44EE8001B89F6 /* SFFeedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedListController.swift; sourceTree = "<group>"; };
 		CBDE98D31CA44EE8001B89F6 /* SFArticleDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFArticleDetailController.swift; sourceTree = "<group>"; };
 		CBDE98DA1CA465C5001B89F6 /* SFArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SFArticle.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				CBDE98D31CA44EE8001B89F6 /* SFArticleDetailController.swift */,
+				CBAB29C51CA47D450079F566 /* SFFeedDetailListController.swift */,
 			);
 			path = ReadFeed;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAB29C61CA47D450079F566 /* SFFeedDetailListController.swift in Sources */,
 				CBDE98D51CA44EE8001B89F6 /* SFArticleDetailController.swift in Sources */,
 				CBDE98D41CA44EE8001B89F6 /* SFFeedListController.swift in Sources */,
 				CBDE98DD1CA465F0001B89F6 /* SFModelManager.swift in Sources */,
