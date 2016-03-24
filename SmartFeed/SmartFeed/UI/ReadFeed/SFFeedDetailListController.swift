@@ -10,7 +10,11 @@ import UIKit
 
 class SFFeedDetailListController: UITableViewController {
 
-    var selectedFeed: SFFeed!
+    var selectedFeed: SFFeed? {
+        didSet {
+//            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +38,14 @@ class SFFeedDetailListController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectedFeed.articles.count
+        return selectedFeed?.articles.count ?? 0
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = selectedFeed.articles[indexPath.row].title
+        cell.textLabel?.text = selectedFeed?.articles[indexPath.row].title
         // Configure the cell...
 
         return cell
@@ -83,14 +87,21 @@ class SFFeedDetailListController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showArticle" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let object = selectedFeed?.articles[indexPath.row]
+                let controller = (segue.destinationViewController as! SFArticleDetailController)
+                controller.article = object
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
     }
-    */
+
 
 }

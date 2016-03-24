@@ -12,8 +12,7 @@ class SFArticleDetailController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
-    var detailItem: SFFeed? {
+    var article: SFArticle! {
         didSet {
             // Update the view.
             self.configureView()
@@ -22,9 +21,9 @@ class SFArticleDetailController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = self.detailItem {
+        if let article = self.article {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.title
+                label.text = article.title
             }
         }
     }

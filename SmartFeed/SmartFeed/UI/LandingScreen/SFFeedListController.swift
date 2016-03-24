@@ -11,7 +11,11 @@ import UIKit
 class SFFeedListController: UITableViewController {
 
     var detailViewController: SFArticleDetailController? = nil
-    var objects = [SFFeed]()
+    var objects = [SFFeed]() {
+        didSet {
+//            self.tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,8 +62,8 @@ class SFFeedListController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row] 
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! SFArticleDetailController
-                controller.detailItem = object
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! SFFeedDetailListController
+                controller.selectedFeed = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
