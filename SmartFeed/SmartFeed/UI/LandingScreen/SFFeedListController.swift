@@ -59,10 +59,10 @@ class SFFeedListController: UITableViewController {
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
+        if segue.identifier == "showFeed" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row] 
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! SFFeedDetailListController
+                let controller = segue.destinationViewController as! SFFeedDetailListController
                 controller.selectedFeed = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true

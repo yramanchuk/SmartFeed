@@ -95,7 +95,7 @@ class SFFeedDetailListController: UITableViewController {
         if segue.identifier == "showArticle" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = selectedFeed?.articles[indexPath.row]
-                let controller = (segue.destinationViewController as! SFArticleDetailController)
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! SFArticleDetailController
                 controller.article = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true

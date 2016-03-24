@@ -83,7 +83,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="JEX-9P-axG" kind="show" identifier="showArticle" action="showDetailViewController:sender:" id="sAS-hu-6Lj"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showArticle" action="showViewController:sender:" id="Bae-MM-XcS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -96,7 +96,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8F-t7-few" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="1218"/>
+            <point key="canvasLocation" x="1558" y="-618"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -139,7 +139,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
+                                    <segue destination="40G-72-sEt" kind="show" identifier="showFeed" id="I5c-Eg-Z82"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -163,15 +163,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="40G-72-sEt" kind="relationship" relationship="rootViewController" id="YsB-AZ-0UR"/>
+                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="qoD-sR-MMb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="129"/>
+            <point key="canvasLocation" x="-61" y="129"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Bae-MM-XcS"/>
     </inferredMetricsTieBreakers>
 </document>
