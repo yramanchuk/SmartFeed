@@ -83,7 +83,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showArticle" action="showViewController:sender:" id="Bae-MM-XcS"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showArticle" id="rLF-Cn-Rg4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -172,6 +172,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bae-MM-XcS"/>
+        <segue reference="rLF-Cn-Rg4"/>
     </inferredMetricsTieBreakers>
 </document>

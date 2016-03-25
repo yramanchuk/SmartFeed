@@ -64,7 +64,6 @@ class SFFeedListController: UITableViewController {
                 let object = objects[indexPath.row] 
                 let controller = segue.destinationViewController as! SFFeedDetailListController
                 controller.selectedFeed = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
