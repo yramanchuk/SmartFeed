@@ -46,7 +46,10 @@ class SFFeedListController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject?) {
-        let newFeed = SFFeed(aTitle: NSDate().description)
+        let newFeed = SFFeed()
+        newFeed.title = NSDate().description
+        newFeed.url = "http://mi3ch.livejournal.com/data/atom"
+        SFNetworkManager.sharedInstatnce.feelFeed(newFeed)
         insertObject(sender, object: newFeed)
     }
 

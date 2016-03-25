@@ -12,7 +12,7 @@ class SFArticleDetailController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-    var article: SFArticle! {
+    var article: Entry! {
         didSet {
             // Update the view.
             self.configureView()

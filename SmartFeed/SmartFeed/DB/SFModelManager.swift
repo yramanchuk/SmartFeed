@@ -16,7 +16,8 @@ class SFModelManager {
         
         var feeds = [SFFeed]()
         for i in 0...5 {
-            let feed = SFFeed(aTitle: "feed \(i)")
+            let feed = SFFeed()
+            feed.title = "feed \(i)"
             feeds.append(feed)
         }
 
