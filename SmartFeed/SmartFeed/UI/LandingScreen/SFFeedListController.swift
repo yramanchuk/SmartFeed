@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SFFeedListController: UITableViewController {
 
@@ -22,7 +23,7 @@ class SFFeedListController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(SFFeedListController.insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
@@ -49,8 +50,13 @@ class SFFeedListController: UITableViewController {
         let newFeed = SFFeed()
         newFeed.title = NSDate().description
         newFeed.url = "http://mi3ch.livejournal.com/data/atom"
-        SFNetworkManager.sharedInstatnce.feelFeed(newFeed)
-        insertObject(sender, object: newFeed)
+        SFNetworkManager.sharedInstatnce.feelFeed(newFeed, completionHandler: {
+            (result: Result<SFFeed, NSError>) -> Void in
+            if result.isSuccess {
+                self.insertObject(sender, object: result.value!)
+            }
+            
+        })
     }
 
     func insertObject(sender: AnyObject?, object:SFFeed) {

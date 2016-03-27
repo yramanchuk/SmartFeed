@@ -20,11 +20,6 @@ class SFFeed: EVObject {
             return entry;
         }
     }
-//    var Name: String = "" // Using the default mapping
-//    var propertyInObject: String = "" // will be written to or read from keyInJson
-//    var ignoredProperty: String = "" // Will not be written or read to/from json
-//    
-
     
 //    init(aTitle: String, anUrl:String) {
 //        title = aTitle;
@@ -47,11 +42,11 @@ class SFFeed: EVObject {
 //        return [("articles", "entry")]
 //    }
 
-    override func setValue(value: AnyObject!, forUndefinedKey key: String) {
-        print("\(value) \(key)")
-    }
+//    override func setValue(value: AnyObject!, forUndefinedKey key: String) {
+//        print("\(value) \(key)")
+//    }
  
-    override var description : String {
+    override var debugDescription : String {
         return "\(title) \(articles)"
     }
 }

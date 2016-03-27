@@ -6,7 +6,7 @@ use_frameworks!
 
 target 'SmartFeed' do
     pod 'Realm', '0.98.5'
-    pod 'Alamofire', '~> 3.2.0'
+    pod 'Alamofire', '~> 3.3.0'
 #    pod 'ObjectMapper', '1.1.5'
 #    pod 'AlamofireObjectMapper', '~> 2.1.2'
 #    pod 'AlamofireImage', '~> 2.2.0'
@@ -14,6 +14,7 @@ target 'SmartFeed' do
     pod 'AlamofireXmlToObjects', '1.0.1'
 #    pod 'AlamofireNetworkActivityIndicator', '~> 1.0' #XCode 7.3
 
+#pod 'Feeder', '~> 0.1'
 
 #obj-c libs https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html
 #    pod 'DZReadability', '0.2.3'

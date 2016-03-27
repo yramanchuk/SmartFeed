@@ -12,46 +12,49 @@ class Entry: EVObject {
     var Name: String = "entry" // Using the default mapping
     
     var title: String?
-//    var url: String?
-    var link:[AnyObject] = [AnyObject]()
+    var link:[NSDictionary] = [NSDictionary]()
+
+    var linkURL: String? {
+        get {
+            for val in link {
+                let relVal: String = val.objectForKey("_rel") as! String
+                if relVal == "alternate" {
+                    return val.objectForKey("_href") as? String;
+                }
+            }
+            
+            return ""
+        }
+    }
     
-//    init(aTitle: String) {
-//        title = aTitle
-//    }
-//
-//    required convenience init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-//    required convenience init(json: String?) {
-//        fatalError("init(json:) has not been implemented")
-//    }
-//
-//    required convenience init(dictionary: NSDictionary) {
-//        fatalError("init(dictionary:) has not been implemented")
-//    }
-//
-//    required convenience init(fileNameInTemp: String) {
-//        fatalError("init(fileNameInTemp:) has not been implemented")
-//    }
-//
-//    required init() {
-//        fatalError("init() has not been implemented")
-//    }
     
-    override var description: String {
-        return "\(title) \(link)"
+    override var debugDescription: String {
+        return "\(title) \(linkURL)"
     }
 
-    override func setValue(value: AnyObject!, forUndefinedKey key: String) {
-        print("\(value) \(key)")
-    }
+//    override func setValue(value: AnyObject!, forUndefinedKey key: String) {
+//        print("\(value) \(key)")
+//    }
     
     override func propertyMapping() -> [(String?, String?)] {
         return [("id", nil), ("published", nil), ("updated", nil), ("category", nil), ("content", nil)]
     }
     
-//    if let (_, propertySetter, _) = (anyObject as? EVObject)?.propertyConverters().filter({$0.0 == key}).first {
-
-    
+//    override func propertyConverters() -> [(String?, ((Any?)->())?, (() -> Any?)? )] {
+//        return [
+//            (
+//                "link", {
+//                    let arr: Array<NSDictionary> = ($0 as? Array<NSDictionary>)!
+//                    for val in arr {
+//                        let relVal: String = val.objectForKey("_rel") as! String
+//                        if relVal == "alternate" {
+//                            self.link = val.objectForKey("_href") as? String;
+//                        }
+//                    }
+//                }, {
+//                    return self.link
+//                }
+//            )
+//        ]
+//    }
 }
