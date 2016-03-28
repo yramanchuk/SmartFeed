@@ -12,7 +12,7 @@ class SFArticleDetailController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-    var article: Entry! {
+    var article: SFArticle! {
         didSet {
             // Update the view.
             self.configureView()
@@ -23,7 +23,7 @@ class SFArticleDetailController: UIViewController {
         // Update the user interface for the detail item.
         if let article = self.article {
             if let label = self.detailDescriptionLabel {
-                label.text = article.title
+                label.text = article.linkURL
             }
         }
     }

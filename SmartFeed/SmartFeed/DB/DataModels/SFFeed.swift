@@ -10,41 +10,16 @@ import EVReflection
 
 class SFFeed: EVObject {
 
-    var entry: [Entry] = [Entry]()
+    var entry: [SFArticle] = [SFArticle]()
     var title: String?
     var url: String!
     
-    var articles: [Entry] {
+    var articles: [SFArticle] {
         get {
             return entry;
         }
     }
     
-//    init(aTitle: String, anUrl:String) {
-//        title = aTitle;
-//        url = anUrl
-//        
-//        //hardcoed initializetion; going to be replaced later
-//        for i in 0...5 {
-//            let article = SFArticle()
-//            article.title = "\(title): article \(i)"
-//            articles.append(article)
-//        }
-//        
-//    }
-//    
-//    convenience init(aTitle: String) {
-//        self.init(aTitle: aTitle, anUrl: "")
-//    }
-
-//    override func propertyMapping() -> [(String?, String?)] {
-//        return [("articles", "entry")]
-//    }
-
-//    override func setValue(value: AnyObject!, forUndefinedKey key: String) {
-//        print("\(value) \(key)")
-//    }
- 
     override var debugDescription : String {
         return "\(title) \(articles)"
     }
@@ -52,6 +27,20 @@ class SFFeed: EVObject {
     override func propertyMapping() -> [(String?, String?)] {
         return [("__name", nil), ("author", nil), ("_xmlns", nil), ("id", nil), ("subtitle", nil), ("updated", nil), ("link", nil), ("_xmlns:lj", nil), ("lj:journal", nil), ("", nil)]
     }
+    
+//    override func propertyConverters() -> [(String?, ((Any?)->())?, (() -> Any?)? )] {
+//        return [
+//            (
+//                "articles", {
+//                    let arr: NSArray = ($0 as? NSArray)!
+//                    self.articles = arr as! [SFArticle];
+//                }, {
+//                    return self.articles
+//                }
+//            )
+//        ]
+//    }
+
 
     
 }

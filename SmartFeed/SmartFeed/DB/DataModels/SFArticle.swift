@@ -8,10 +8,11 @@
 
 import EVReflection
 
-class Entry: EVObject {
+class SFArticle: EVObject {
     var Name: String = "entry" // Using the default mapping
     
     var title: String?
+//    var content: String?
     var link:[NSDictionary] = [NSDictionary]()
 
     var linkURL: String? {
