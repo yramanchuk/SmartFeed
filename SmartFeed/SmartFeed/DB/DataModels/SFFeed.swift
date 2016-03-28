@@ -10,7 +10,6 @@ import EVReflection
 
 class SFFeed: EVObject {
 
-    var _name = "feed"
     var entry: [Entry] = [Entry]()
     var title: String?
     var url: String!
@@ -49,4 +48,10 @@ class SFFeed: EVObject {
     override var debugDescription : String {
         return "\(title) \(articles)"
     }
+    
+    override func propertyMapping() -> [(String?, String?)] {
+        return [("__name", nil), ("author", nil), ("_xmlns", nil), ("id", nil), ("subtitle", nil), ("updated", nil), ("link", nil), ("_xmlns:lj", nil), ("lj:journal", nil), ("", nil)]
+    }
+
+    
 }
