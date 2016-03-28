@@ -32,12 +32,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XcW-e2-vFB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcW-e2-vFB">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XcW-e2-vFB" firstAttribute="top" secondItem="svH-Pt-448" secondAttribute="top" id="8Mm-fj-u2H"/>
+                            <constraint firstItem="XcW-e2-vFB" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="A9o-gs-EdN"/>
+                            <constraint firstAttribute="trailing" secondItem="XcW-e2-vFB" secondAttribute="trailing" id="DNf-Xe-kEV"/>
+                            <constraint firstItem="XcW-e2-vFB" firstAttribute="bottom" secondItem="GAO-Cl-Wes" secondAttribute="top" id="z2k-zQ-ZDO"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>

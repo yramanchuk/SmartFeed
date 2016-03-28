@@ -49,7 +49,7 @@ class SFFeedListController: UITableViewController {
     func insertNewObject(sender: AnyObject?) {
         let newFeed = SFFeed()
         newFeed.title = NSDate().description
-        newFeed.url = "http://mi3ch.livejournal.com/data/atom"
+        newFeed.url = "http://tema.livejournal.com/data/atom"
         SFNetworkManager.sharedInstatnce.feelFeed(newFeed, completionHandler: {
             (result: Result<SFFeed, NSError>) -> Void in
             if result.isSuccess {

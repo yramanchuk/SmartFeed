@@ -20,7 +20,7 @@ class SFArticle: EVObject {
             for val in link {
                 let relVal: String = val.objectForKey("_rel") as! String
                 if relVal == "alternate" {
-                    return val.objectForKey("_href") as? String;
+                    return val.objectForKey("_href") as? String!;
                 }
             }
             

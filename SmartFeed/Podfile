@@ -17,8 +17,8 @@ target 'SmartFeed' do
 #pod 'Feeder', '~> 0.1'
 
 #obj-c libs https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html
-#    pod 'DZReadability', '0.2.3'
 #    pod 'HTMLReader', '0.9.5'
+#    pod 'DZReadability', '0.2.3'
 end
 
 target 'SmartFeedTests' do

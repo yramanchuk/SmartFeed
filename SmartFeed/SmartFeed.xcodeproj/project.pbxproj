@@ -9,6 +9,25 @@
 /* Begin PBXBuildFile section */
 		A211193993F97DAF16DEB04A /* Pods_SmartFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C280389EBC5FE9FEAC85A6 /* Pods_SmartFeed.framework */; };
 		CB34D7CA1CA536CF00162CC6 /* SFNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB34D7C91CA536CF00162CC6 /* SFNetworkManager.swift */; };
+		CB3C090B1CA9D16900B6AE65 /* DZReadability.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08DF1CA9D16900B6AE65 /* DZReadability.m */; };
+		CB3C090C1CA9D16900B6AE65 /* GGReadabilityParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08E21CA9D16900B6AE65 /* GGReadabilityParser.m */; };
+		CB3C090D1CA9D16900B6AE65 /* HTMLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08E51CA9D16900B6AE65 /* HTMLComment.m */; };
+		CB3C090E1CA9D16900B6AE65 /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08E71CA9D16900B6AE65 /* HTMLDocument.m */; };
+		CB3C090F1CA9D16900B6AE65 /* HTMLDocumentType.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08E91CA9D16900B6AE65 /* HTMLDocumentType.m */; };
+		CB3C09101CA9D16900B6AE65 /* HTMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08EB1CA9D16900B6AE65 /* HTMLElement.m */; };
+		CB3C09111CA9D16900B6AE65 /* HTMLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08ED1CA9D16900B6AE65 /* HTMLEncoding.m */; };
+		CB3C09121CA9D16900B6AE65 /* HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08EF1CA9D16900B6AE65 /* HTMLEntities.m */; };
+		CB3C09131CA9D16900B6AE65 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08F21CA9D16900B6AE65 /* HTMLNode.m */; };
+		CB3C09141CA9D16900B6AE65 /* HTMLOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08F41CA9D16900B6AE65 /* HTMLOrderedDictionary.m */; };
+		CB3C09151CA9D16900B6AE65 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08F61CA9D16900B6AE65 /* HTMLParser.m */; };
+		CB3C09161CA9D16900B6AE65 /* HTMLPreprocessedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08F81CA9D16900B6AE65 /* HTMLPreprocessedInputStream.m */; };
+		CB3C09171CA9D16900B6AE65 /* HTMLSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08FC1CA9D16900B6AE65 /* HTMLSelector.m */; };
+		CB3C09181CA9D16900B6AE65 /* HTMLSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08FE1CA9D16900B6AE65 /* HTMLSerialization.m */; };
+		CB3C09191CA9D16900B6AE65 /* HTMLString.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C09001CA9D16900B6AE65 /* HTMLString.m */; };
+		CB3C091A1CA9D16900B6AE65 /* HTMLTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C09031CA9D16900B6AE65 /* HTMLTextNode.m */; };
+		CB3C091B1CA9D16900B6AE65 /* HTMLTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C09051CA9D16900B6AE65 /* HTMLTokenizer.m */; };
+		CB3C091C1CA9D16900B6AE65 /* HTMLTreeEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C09081CA9D16900B6AE65 /* HTMLTreeEnumerator.m */; };
+		CB3C091D1CA9D16900B6AE65 /* NSString+HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C090A1CA9D16900B6AE65 /* NSString+HTMLEntities.m */; };
 		CB8B426A1CA4335200DEAAC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */; };
 		CB8B42711CA4335200DEAAC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8B426F1CA4335200DEAAC7 /* Main.storyboard */; };
 		CB8B42731CA4335200DEAAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8B42721CA4335200DEAAC7 /* Assets.xcassets */; };
@@ -44,6 +63,51 @@
 		30BD5343AA25C50BF723FD43 /* Pods-SmartFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeed/Pods-SmartFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		83C280389EBC5FE9FEAC85A6 /* Pods_SmartFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB34D7C91CA536CF00162CC6 /* SFNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFNetworkManager.swift; sourceTree = "<group>"; };
+		CB3C08D81CA9D15800B6AE65 /* SmartFeed-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartFeed-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB3C08DE1CA9D16900B6AE65 /* DZReadability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZReadability.h; sourceTree = "<group>"; };
+		CB3C08DF1CA9D16900B6AE65 /* DZReadability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZReadability.m; sourceTree = "<group>"; };
+		CB3C08E01CA9D16900B6AE65 /* DZReadability_constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZReadability_constants.h; sourceTree = "<group>"; };
+		CB3C08E11CA9D16900B6AE65 /* GGReadabilityParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGReadabilityParser.h; sourceTree = "<group>"; };
+		CB3C08E21CA9D16900B6AE65 /* GGReadabilityParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGReadabilityParser.m; sourceTree = "<group>"; };
+		CB3C08E41CA9D16900B6AE65 /* HTMLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLComment.h; sourceTree = "<group>"; };
+		CB3C08E51CA9D16900B6AE65 /* HTMLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLComment.m; sourceTree = "<group>"; };
+		CB3C08E61CA9D16900B6AE65 /* HTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocument.h; sourceTree = "<group>"; };
+		CB3C08E71CA9D16900B6AE65 /* HTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocument.m; sourceTree = "<group>"; };
+		CB3C08E81CA9D16900B6AE65 /* HTMLDocumentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocumentType.h; sourceTree = "<group>"; };
+		CB3C08E91CA9D16900B6AE65 /* HTMLDocumentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocumentType.m; sourceTree = "<group>"; };
+		CB3C08EA1CA9D16900B6AE65 /* HTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLElement.h; sourceTree = "<group>"; };
+		CB3C08EB1CA9D16900B6AE65 /* HTMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLElement.m; sourceTree = "<group>"; };
+		CB3C08EC1CA9D16900B6AE65 /* HTMLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLEncoding.h; sourceTree = "<group>"; };
+		CB3C08ED1CA9D16900B6AE65 /* HTMLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLEncoding.m; sourceTree = "<group>"; };
+		CB3C08EE1CA9D16900B6AE65 /* HTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLEntities.h; sourceTree = "<group>"; };
+		CB3C08EF1CA9D16900B6AE65 /* HTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLEntities.m; sourceTree = "<group>"; };
+		CB3C08F01CA9D16900B6AE65 /* HTMLNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNamespace.h; sourceTree = "<group>"; };
+		CB3C08F11CA9D16900B6AE65 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		CB3C08F21CA9D16900B6AE65 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		CB3C08F31CA9D16900B6AE65 /* HTMLOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLOrderedDictionary.h; sourceTree = "<group>"; };
+		CB3C08F41CA9D16900B6AE65 /* HTMLOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLOrderedDictionary.m; sourceTree = "<group>"; };
+		CB3C08F51CA9D16900B6AE65 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		CB3C08F61CA9D16900B6AE65 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		CB3C08F71CA9D16900B6AE65 /* HTMLPreprocessedInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLPreprocessedInputStream.h; sourceTree = "<group>"; };
+		CB3C08F81CA9D16900B6AE65 /* HTMLPreprocessedInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLPreprocessedInputStream.m; sourceTree = "<group>"; };
+		CB3C08F91CA9D16900B6AE65 /* HTMLQuirksMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLQuirksMode.h; sourceTree = "<group>"; };
+		CB3C08FA1CA9D16900B6AE65 /* HTMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLReader.h; sourceTree = "<group>"; };
+		CB3C08FB1CA9D16900B6AE65 /* HTMLSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSelector.h; sourceTree = "<group>"; };
+		CB3C08FC1CA9D16900B6AE65 /* HTMLSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLSelector.m; sourceTree = "<group>"; };
+		CB3C08FD1CA9D16900B6AE65 /* HTMLSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSerialization.h; sourceTree = "<group>"; };
+		CB3C08FE1CA9D16900B6AE65 /* HTMLSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLSerialization.m; sourceTree = "<group>"; };
+		CB3C08FF1CA9D16900B6AE65 /* HTMLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLString.h; sourceTree = "<group>"; };
+		CB3C09001CA9D16900B6AE65 /* HTMLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLString.m; sourceTree = "<group>"; };
+		CB3C09011CA9D16900B6AE65 /* HTMLSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSupport.h; sourceTree = "<group>"; };
+		CB3C09021CA9D16900B6AE65 /* HTMLTextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTextNode.h; sourceTree = "<group>"; };
+		CB3C09031CA9D16900B6AE65 /* HTMLTextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTextNode.m; sourceTree = "<group>"; };
+		CB3C09041CA9D16900B6AE65 /* HTMLTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTokenizer.h; sourceTree = "<group>"; };
+		CB3C09051CA9D16900B6AE65 /* HTMLTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTokenizer.m; sourceTree = "<group>"; };
+		CB3C09061CA9D16900B6AE65 /* HTMLTokenizerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTokenizerState.h; sourceTree = "<group>"; };
+		CB3C09071CA9D16900B6AE65 /* HTMLTreeEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTreeEnumerator.h; sourceTree = "<group>"; };
+		CB3C09081CA9D16900B6AE65 /* HTMLTreeEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTreeEnumerator.m; sourceTree = "<group>"; };
+		CB3C09091CA9D16900B6AE65 /* NSString+HTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTMLEntities.h"; sourceTree = "<group>"; };
+		CB3C090A1CA9D16900B6AE65 /* NSString+HTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTMLEntities.m"; sourceTree = "<group>"; };
 		CB8B42661CA4335200DEAAC7 /* SmartFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8B42701CA4335200DEAAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +180,73 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		CB3C08DC1CA9D16900B6AE65 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CB3C08DD1CA9D16900B6AE65 /* DZReadability */,
+				CB3C08E31CA9D16900B6AE65 /* HTMLReader */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CB3C08DD1CA9D16900B6AE65 /* DZReadability */ = {
+			isa = PBXGroup;
+			children = (
+				CB3C08DE1CA9D16900B6AE65 /* DZReadability.h */,
+				CB3C08DF1CA9D16900B6AE65 /* DZReadability.m */,
+				CB3C08E01CA9D16900B6AE65 /* DZReadability_constants.h */,
+				CB3C08E11CA9D16900B6AE65 /* GGReadabilityParser.h */,
+				CB3C08E21CA9D16900B6AE65 /* GGReadabilityParser.m */,
+			);
+			path = DZReadability;
+			sourceTree = "<group>";
+		};
+		CB3C08E31CA9D16900B6AE65 /* HTMLReader */ = {
+			isa = PBXGroup;
+			children = (
+				CB3C08E41CA9D16900B6AE65 /* HTMLComment.h */,
+				CB3C08E51CA9D16900B6AE65 /* HTMLComment.m */,
+				CB3C08E61CA9D16900B6AE65 /* HTMLDocument.h */,
+				CB3C08E71CA9D16900B6AE65 /* HTMLDocument.m */,
+				CB3C08E81CA9D16900B6AE65 /* HTMLDocumentType.h */,
+				CB3C08E91CA9D16900B6AE65 /* HTMLDocumentType.m */,
+				CB3C08EA1CA9D16900B6AE65 /* HTMLElement.h */,
+				CB3C08EB1CA9D16900B6AE65 /* HTMLElement.m */,
+				CB3C08EC1CA9D16900B6AE65 /* HTMLEncoding.h */,
+				CB3C08ED1CA9D16900B6AE65 /* HTMLEncoding.m */,
+				CB3C08EE1CA9D16900B6AE65 /* HTMLEntities.h */,
+				CB3C08EF1CA9D16900B6AE65 /* HTMLEntities.m */,
+				CB3C08F01CA9D16900B6AE65 /* HTMLNamespace.h */,
+				CB3C08F11CA9D16900B6AE65 /* HTMLNode.h */,
+				CB3C08F21CA9D16900B6AE65 /* HTMLNode.m */,
+				CB3C08F31CA9D16900B6AE65 /* HTMLOrderedDictionary.h */,
+				CB3C08F41CA9D16900B6AE65 /* HTMLOrderedDictionary.m */,
+				CB3C08F51CA9D16900B6AE65 /* HTMLParser.h */,
+				CB3C08F61CA9D16900B6AE65 /* HTMLParser.m */,
+				CB3C08F71CA9D16900B6AE65 /* HTMLPreprocessedInputStream.h */,
+				CB3C08F81CA9D16900B6AE65 /* HTMLPreprocessedInputStream.m */,
+				CB3C08F91CA9D16900B6AE65 /* HTMLQuirksMode.h */,
+				CB3C08FA1CA9D16900B6AE65 /* HTMLReader.h */,
+				CB3C08FB1CA9D16900B6AE65 /* HTMLSelector.h */,
+				CB3C08FC1CA9D16900B6AE65 /* HTMLSelector.m */,
+				CB3C08FD1CA9D16900B6AE65 /* HTMLSerialization.h */,
+				CB3C08FE1CA9D16900B6AE65 /* HTMLSerialization.m */,
+				CB3C08FF1CA9D16900B6AE65 /* HTMLString.h */,
+				CB3C09001CA9D16900B6AE65 /* HTMLString.m */,
+				CB3C09011CA9D16900B6AE65 /* HTMLSupport.h */,
+				CB3C09021CA9D16900B6AE65 /* HTMLTextNode.h */,
+				CB3C09031CA9D16900B6AE65 /* HTMLTextNode.m */,
+				CB3C09041CA9D16900B6AE65 /* HTMLTokenizer.h */,
+				CB3C09051CA9D16900B6AE65 /* HTMLTokenizer.m */,
+				CB3C09061CA9D16900B6AE65 /* HTMLTokenizerState.h */,
+				CB3C09071CA9D16900B6AE65 /* HTMLTreeEnumerator.h */,
+				CB3C09081CA9D16900B6AE65 /* HTMLTreeEnumerator.m */,
+				CB3C09091CA9D16900B6AE65 /* NSString+HTMLEntities.h */,
+				CB3C090A1CA9D16900B6AE65 /* NSString+HTMLEntities.m */,
+			);
+			path = HTMLReader;
+			sourceTree = "<group>";
+		};
 		CB8B425D1CA4335200DEAAC7 = {
 			isa = PBXGroup;
 			children = (
@@ -144,11 +275,13 @@
 				CBDE98D81CA4656A001B89F6 /* DB */,
 				CB34D7C81CA536AF00162CC6 /* Network */,
 				CBDE98CE1CA44EE8001B89F6 /* UI */,
+				CB3C08DC1CA9D16900B6AE65 /* Utils */,
 				CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */,
 				CB8B426F1CA4335200DEAAC7 /* Main.storyboard */,
 				CB8B42721CA4335200DEAAC7 /* Assets.xcassets */,
 				CB8B42741CA4335200DEAAC7 /* LaunchScreen.storyboard */,
 				CB8B42771CA4335200DEAAC7 /* Info.plist */,
+				CB3C08D81CA9D15800B6AE65 /* SmartFeed-Bridging-Header.h */,
 			);
 			path = SmartFeed;
 			sourceTree = "<group>";
@@ -288,7 +421,7 @@
 		CB8B425E1CA4335200DEAAC7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Yury Ramanchuk";
 				TargetAttributes = {
@@ -405,13 +538,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3C09111CA9D16900B6AE65 /* HTMLEncoding.m in Sources */,
+				CB3C090F1CA9D16900B6AE65 /* HTMLDocumentType.m in Sources */,
 				CBAB29C61CA47D450079F566 /* SFFeedDetailListController.swift in Sources */,
+				CB3C09121CA9D16900B6AE65 /* HTMLEntities.m in Sources */,
 				CBDE98D51CA44EE8001B89F6 /* SFArticleDetailController.swift in Sources */,
+				CB3C09101CA9D16900B6AE65 /* HTMLElement.m in Sources */,
+				CB3C09151CA9D16900B6AE65 /* HTMLParser.m in Sources */,
 				CBDE98D41CA44EE8001B89F6 /* SFFeedListController.swift in Sources */,
 				CBDE98DD1CA465F0001B89F6 /* SFModelManager.swift in Sources */,
+				CB3C091A1CA9D16900B6AE65 /* HTMLTextNode.m in Sources */,
+				CB3C090B1CA9D16900B6AE65 /* DZReadability.m in Sources */,
+				CB3C090E1CA9D16900B6AE65 /* HTMLDocument.m in Sources */,
+				CB3C090D1CA9D16900B6AE65 /* HTMLComment.m in Sources */,
+				CB3C090C1CA9D16900B6AE65 /* GGReadabilityParser.m in Sources */,
+				CB3C09141CA9D16900B6AE65 /* HTMLOrderedDictionary.m in Sources */,
+				CB3C09191CA9D16900B6AE65 /* HTMLString.m in Sources */,
 				CB34D7CA1CA536CF00162CC6 /* SFNetworkManager.swift in Sources */,
 				CB8B426A1CA4335200DEAAC7 /* AppDelegate.swift in Sources */,
+				CB3C09171CA9D16900B6AE65 /* HTMLSelector.m in Sources */,
+				CB3C091D1CA9D16900B6AE65 /* NSString+HTMLEntities.m in Sources */,
+				CB3C09181CA9D16900B6AE65 /* HTMLSerialization.m in Sources */,
+				CB3C091C1CA9D16900B6AE65 /* HTMLTreeEnumerator.m in Sources */,
+				CB3C09161CA9D16900B6AE65 /* HTMLPreprocessedInputStream.m in Sources */,
 				CBDE98DF1CA467C5001B89F6 /* SFFeed.swift in Sources */,
+				CB3C091B1CA9D16900B6AE65 /* HTMLTokenizer.m in Sources */,
+				CB3C09131CA9D16900B6AE65 /* HTMLNode.m in Sources */,
 				CBDE98DB1CA465C5001B89F6 /* SFArticle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,10 +707,13 @@
 			baseConfigurationReference = 30BD5343AA25C50BF723FD43 /* Pods-SmartFeed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SmartFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramanchuk.SmartFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartFeed/SmartFeed-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -567,10 +722,12 @@
 			baseConfigurationReference = D20CE6A34BAE61D4135E32A0 /* Pods-SmartFeed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SmartFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramanchuk.SmartFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartFeed/SmartFeed-Bridging-Header.h";
 			};
 			name = Release;
 		};
