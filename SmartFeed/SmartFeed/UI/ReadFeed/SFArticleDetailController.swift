@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
 class SFArticleDetailController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    var webView: WKWebView?
 
     var article: SFArticle! {
         didSet {
@@ -22,15 +24,19 @@ class SFArticleDetailController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let article = self.article {
-            if let label = self.detailDescriptionLabel {
-                label.text = article.linkURL
+            if let wv = self.webView {
+                let req = NSURLRequest(URL:NSURL(string:article.linkURL!)!)
+                wv.loadRequest(req)
             }
+
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.webView = WKWebView(frame: self.view.frame)
+        self.containerView.addSubview(self.webView!)
+        
         self.configureView()
     }
 
