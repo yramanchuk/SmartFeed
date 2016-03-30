@@ -47,16 +47,18 @@ class SFFeedListController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject?) {
-        let newFeed = SFFeed()
-        newFeed.title = NSDate().description
-        newFeed.url = "http://tema.livejournal.com/data/atom"
-        SFNetworkManager.sharedInstatnce.feelFeed(newFeed, completionHandler: {
-            (result: Result<SFFeed, NSError>) -> Void in
-            if result.isSuccess {
-                self.insertObject(sender, object: result.value!)
+        SFNetworkManager.sharedInstatnce.feelFeedAtom("http://tema.livejournal.com/data/atom") { (result, error) in
+            if error == nil {
+                self.insertObject(sender, object: result!)
             }
-            
-        })
+        }
+
+        SFNetworkManager.sharedInstatnce.feelFeedRss("http://kyky.org/rss.xml") { (result, error) in
+            if error == nil {
+                self.insertObject(sender, object: result!)
+            }
+        }
+    
     }
 
     func insertObject(sender: AnyObject?, object:SFFeed) {

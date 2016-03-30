@@ -13,18 +13,20 @@ class SFNetworkManager {
     static let sharedInstatnce = SFNetworkManager()
 
     
-    func feelFeed(feed: SFFeed, completionHandler: (Result<SFFeed, NSError>) -> Void) {
-        Alamofire.request(.GET, feed.url).responseObject
-            {(result: Result<SFFeed, NSError>) -> Void in
-//                print(result)
-//                switch result {
-//                case .Success:
-//                    debugPrint("feed: \(result.value)\n")
-//                    completionHandler(result)
-//                case .Failure(let error):
-//                    print("\(error)\n")
-//                }
-                completionHandler(result)
+    func feelFeedAtom(url: String, completionHandler: (result: SFFeed?, error: NSError?) -> Void) {
+        Alamofire.request(.GET, url).responseObject
+            {(result: Result<SFFeedAtom, NSError>) -> Void in
+                completionHandler(result: result.value, error: result.error)
+        }
+    }
+
+    
+    
+    func feelFeedRss(url: String, completionHandler: (result: SFFeed?, error: NSError?) -> Void) {
+        Alamofire.request(.GET, url).responseObject
+            {(result: Result<SFRss, NSError>) -> Void in
+//                debugPrint(result.value?.channel)
+                completionHandler(result: result.value?.channel, error: result.error)
         }
     }
 

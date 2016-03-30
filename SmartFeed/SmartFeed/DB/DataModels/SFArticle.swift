@@ -12,21 +12,8 @@ class SFArticle: EVObject {
     var Name: String = "entry" // Using the default mapping
     
     var title: String?
-//    var content: String?
-    var link:[NSDictionary] = [NSDictionary]()
 
-    var linkURL: String? {
-        get {
-            for val in link {
-                let relVal: String = val.objectForKey("_rel") as! String
-                if relVal == "alternate" {
-                    return val.objectForKey("_href") as? String!;
-                }
-            }
-            
-            return ""
-        }
-    }
+    private(set) var linkURL: String?
     
     
     override var debugDescription: String {
@@ -41,21 +28,4 @@ class SFArticle: EVObject {
         return [("id", nil), ("published", nil), ("updated", nil), ("category", nil), ("content", nil)]
     }
     
-//    override func propertyConverters() -> [(String?, ((Any?)->())?, (() -> Any?)? )] {
-//        return [
-//            (
-//                "link", {
-//                    let arr: Array<NSDictionary> = ($0 as? Array<NSDictionary>)!
-//                    for val in arr {
-//                        let relVal: String = val.objectForKey("_rel") as! String
-//                        if relVal == "alternate" {
-//                            self.link = val.objectForKey("_href") as? String;
-//                        }
-//                    }
-//                }, {
-//                    return self.link
-//                }
-//            )
-//        ]
-//    }
 }
