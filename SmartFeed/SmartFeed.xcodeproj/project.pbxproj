@@ -35,6 +35,7 @@
 		CB48BE191CAC18140046DDDF /* SFArticleRss.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB48BE181CAC18140046DDDF /* SFArticleRss.swift */; };
 		CB48BE1B1CAC18320046DDDF /* SFArticleAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB48BE1A1CAC18320046DDDF /* SFArticleAtom.swift */; };
 		CB8AB5CF1CAC1D7C00639999 /* SFFeedAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB5CE1CAC1D7C00639999 /* SFFeedAtom.swift */; };
+		CB8AB5D11CAC260A00639999 /* SFBrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB5D01CAC260A00639999 /* SFBrowseController.swift */; };
 		CB8B426A1CA4335200DEAAC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */; };
 		CB8B42711CA4335200DEAAC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8B426F1CA4335200DEAAC7 /* Main.storyboard */; };
 		CB8B42731CA4335200DEAAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8B42721CA4335200DEAAC7 /* Assets.xcassets */; };
@@ -120,6 +121,7 @@
 		CB48BE181CAC18140046DDDF /* SFArticleRss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFArticleRss.swift; sourceTree = "<group>"; };
 		CB48BE1A1CAC18320046DDDF /* SFArticleAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFArticleAtom.swift; sourceTree = "<group>"; };
 		CB8AB5CE1CAC1D7C00639999 /* SFFeedAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedAtom.swift; sourceTree = "<group>"; };
+		CB8AB5D01CAC260A00639999 /* SFBrowseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFBrowseController.swift; sourceTree = "<group>"; };
 		CB8B42661CA4335200DEAAC7 /* SmartFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8B42701CA4335200DEAAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 		CBDE98CF1CA44EE8001B89F6 /* BrowseWeb */ = {
 			isa = PBXGroup;
 			children = (
+				CB8AB5D01CAC260A00639999 /* SFBrowseController.swift */,
 			);
 			path = BrowseWeb;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				CB48BE141CAC17E40046DDDF /* SFFeedRss.swift in Sources */,
 				CB48BE161CAC17E40046DDDF /* SFArticle.swift in Sources */,
 				CB3C091C1CA9D16900B6AE65 /* HTMLTreeEnumerator.m in Sources */,
+				CB8AB5D11CAC260A00639999 /* SFBrowseController.swift in Sources */,
 				CB3C09161CA9D16900B6AE65 /* HTMLPreprocessedInputStream.m in Sources */,
 				CB3C091B1CA9D16900B6AE65 /* HTMLTokenizer.m in Sources */,
 				CB3C09131CA9D16900B6AE65 /* HTMLNode.m in Sources */,
