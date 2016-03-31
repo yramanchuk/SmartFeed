@@ -43,10 +43,10 @@
                                             <action selector="onForward:" destination="JJa-0x-3og" eventType="touchUpInside" id="MLu-hG-21f"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eib-lW-3S8">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eib-lW-3S8">
                                         <rect key="frame" x="60" y="24" width="480" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="urlWasSet:" destination="JJa-0x-3og" eventType="editingDidEnd" id="b1l-RT-t6Z"/>
                                             <outlet property="delegate" destination="JJa-0x-3og" id="cuu-I9-uYV"/>
@@ -102,7 +102,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAdd" destination="Oaf-Xd-mM4" id="EwX-fZ-c8d"/>
+                        <outlet property="btnBack" destination="F90-7D-DTf" id="XVG-8q-D2o"/>
+                        <outlet property="btnClose" destination="il6-z8-Hae" id="FKX-zu-K4r"/>
+                        <outlet property="btnForward" destination="I0U-3e-gH7" id="1VM-VH-iHL"/>
                         <outlet property="containerView" destination="oQP-Eo-1BK" id="odJ-cV-9VI"/>
+                        <outlet property="urlTextFiled" destination="eib-lW-3S8" id="Oc3-D7-BPe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIZ-dX-dts" userLabel="First Responder" sceneMemberID="firstResponder"/>

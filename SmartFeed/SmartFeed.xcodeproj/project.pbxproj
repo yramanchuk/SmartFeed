@@ -36,6 +36,8 @@
 		CB48BE1B1CAC18320046DDDF /* SFArticleAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB48BE1A1CAC18320046DDDF /* SFArticleAtom.swift */; };
 		CB8AB5CF1CAC1D7C00639999 /* SFFeedAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB5CE1CAC1D7C00639999 /* SFFeedAtom.swift */; };
 		CB8AB5D11CAC260A00639999 /* SFBrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB5D01CAC260A00639999 /* SFBrowseController.swift */; };
+		CB8AB5D31CAD60F000639999 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = CB8AB5D21CAD60F000639999 /* script.js */; };
+		CB8AB5D51CAD6EDB00639999 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB5D41CAD6EDB00639999 /* Constants.swift */; };
 		CB8B426A1CA4335200DEAAC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */; };
 		CB8B42711CA4335200DEAAC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8B426F1CA4335200DEAAC7 /* Main.storyboard */; };
 		CB8B42731CA4335200DEAAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8B42721CA4335200DEAAC7 /* Assets.xcassets */; };
@@ -122,6 +124,8 @@
 		CB48BE1A1CAC18320046DDDF /* SFArticleAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFArticleAtom.swift; sourceTree = "<group>"; };
 		CB8AB5CE1CAC1D7C00639999 /* SFFeedAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedAtom.swift; sourceTree = "<group>"; };
 		CB8AB5D01CAC260A00639999 /* SFBrowseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFBrowseController.swift; sourceTree = "<group>"; };
+		CB8AB5D21CAD60F000639999 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		CB8AB5D41CAD6EDB00639999 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB8B42661CA4335200DEAAC7 /* SmartFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8B42701CA4335200DEAAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -319,10 +323,12 @@
 				CBDE98CE1CA44EE8001B89F6 /* UI */,
 				CB3C08DC1CA9D16900B6AE65 /* Utils */,
 				CB8B42691CA4335200DEAAC7 /* AppDelegate.swift */,
+				CB8AB5D41CAD6EDB00639999 /* Constants.swift */,
 				CB8B426F1CA4335200DEAAC7 /* Main.storyboard */,
 				CB8B42721CA4335200DEAAC7 /* Assets.xcassets */,
 				CB8B42741CA4335200DEAAC7 /* LaunchScreen.storyboard */,
 				CB8B42771CA4335200DEAAC7 /* Info.plist */,
+				CB8AB5D21CAD60F000639999 /* script.js */,
 				CB3C08D81CA9D15800B6AE65 /* SmartFeed-Bridging-Header.h */,
 			);
 			path = SmartFeed;
@@ -498,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB8B42761CA4335200DEAAC7 /* LaunchScreen.storyboard in Resources */,
+				CB8AB5D31CAD60F000639999 /* script.js in Resources */,
 				CB8B42731CA4335200DEAAC7 /* Assets.xcassets in Resources */,
 				CB8B42711CA4335200DEAAC7 /* Main.storyboard in Resources */,
 			);
@@ -573,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB3C09111CA9D16900B6AE65 /* HTMLEncoding.m in Sources */,
+				CB8AB5D51CAD6EDB00639999 /* Constants.swift in Sources */,
 				CB3C090F1CA9D16900B6AE65 /* HTMLDocumentType.m in Sources */,
 				CBAB29C61CA47D450079F566 /* SFFeedDetailListController.swift in Sources */,
 				CB3C09121CA9D16900B6AE65 /* HTMLEntities.m in Sources */,
