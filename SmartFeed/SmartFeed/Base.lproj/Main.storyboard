@@ -49,6 +49,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="urlWasSet:" destination="JJa-0x-3og" eventType="editingDidEnd" id="b1l-RT-t6Z"/>
+                                            <outlet property="delegate" destination="JJa-0x-3og" id="cuu-I9-uYV"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-Xd-mM4">
@@ -102,7 +103,6 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="oQP-Eo-1BK" id="odJ-cV-9VI"/>
-                        <outlet property="urlField" destination="eib-lW-3S8" id="obp-Sz-ed4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIZ-dX-dts" userLabel="First Responder" sceneMemberID="firstResponder"/>

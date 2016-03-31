@@ -11,7 +11,6 @@ import WebKit
 
 class SFBrowseController: UIViewController {
 
-    @IBOutlet weak var urlField: UITextField!
     @IBOutlet weak var containerView: UIView!
     var webView: WKWebView!
 
@@ -44,16 +43,22 @@ class SFBrowseController: UIViewController {
     }
     @IBAction func urlWasSet(sender: AnyObject) {
         let tv = sender as! UITextField;
-        print("\(tv.text)")
-        if let text = tv.text {
+        let url = tv.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        if url.characters.count > 0 {
             self.webView.stopLoading()
-            self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://\(text)")!))
+            self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://\(url)")!))
         }
         
         
     }
 
     @IBAction func onAdd(sender: AnyObject) {
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
     /*
     // MARK: - Navigation
