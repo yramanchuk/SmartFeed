@@ -29,13 +29,17 @@ class SFBrowseController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let userAgent = "Chrome Safari"
 
         let contentController = WKUserContentController();
         contentController.addUserScript(self.getUserScript("script"))
         let config = WKWebViewConfiguration()
+        config.applicationNameForUserAgent = userAgent
         config.userContentController = contentController
         self.webView = WKWebView(frame: CGRectZero, configuration: config)
-
+        self.webView.customUserAgent = userAgent
+        
         self.containerView.addSubview(self.webView)
         
         self.webView!.translatesAutoresizingMaskIntoConstraints = false
