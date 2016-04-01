@@ -333,9 +333,9 @@
 		CB94F42C1CAE9251006EA9F7 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				CB94F42D1CAE9251006EA9F7 /* Realm */,
 				CB94F42E1CAE9251006EA9F7 /* SFArticleProtocol.swift */,
 				CB94F4431CAE9AFE006EA9F7 /* SFFeedProtocol.swift */,
+				CB94F42D1CAE9251006EA9F7 /* Realm */,
 				CB94F42F1CAE9251006EA9F7 /* XML */,
 			);
 			path = DataModels;
