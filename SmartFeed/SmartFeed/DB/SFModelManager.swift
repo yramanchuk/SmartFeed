@@ -12,39 +12,39 @@ class SFModelManager {
     static let sharedInstatnce = SFModelManager()
     
 
-//// 1.    I want to work like this
-//    func getAllFeeds() -> [SFFeedProtocol] {
-//        
-//        let realm = try! Realm()
-//        let feeds = realm.objects(SFFeedRealm)
-//
-//        return Array(feeds)
-//    }
+// 1.    I want to work like this
+    func getAllFeeds() -> [SFFeedProtocol] {
+        
+        let realm = try! Realm()
+        let feeds = realm.objects(SFFeedRealm)
+
+        return Array(feeds)
+    }
 
     
-// 2.
-    /*
-        This works - see return type
-     */
-     func getAllFeeds() -> [SFFeedRealm] {
-     
-     let realm = try! Realm()
-     let feeds = realm.objects(SFFeedRealm)
-     
-     return Array(feeds)
-     }
+//// 2.
+//    /*
+//        This works - see return type
+//     */
+//     func getAllFeeds() -> [SFFeedRealm] {
+//     
+//     let realm = try! Realm()
+//     let feeds = realm.objects(SFFeedRealm)
+//     
+//     return Array(feeds)
+//     }
  
   
 //// 3.
 //    /*
-//     even this doesn't work
+//     adding one by one works
 //     */
 //    func getAllFeeds() -> [SFFeedProtocol] {
 //        
 //        let realm = try! Realm()
 //        let feeds = realm.objects(SFFeedRealm)
 //        
-//        var result = [SFFeedRealm]()
+//        var result = [SFFeedProtocol]()
 //        for feed in Array(feeds) {
 //            result.append(feed)
 //        }
