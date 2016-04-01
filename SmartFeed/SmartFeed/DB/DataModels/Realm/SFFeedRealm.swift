@@ -14,16 +14,9 @@ class SFFeedRealm: Object, SFFeedProtocol {
 
     let articlesDB = List<SFArticleRealm>()
     
-//    var articles = [SFArticleProtocol]()
     var articles: [SFArticleProtocol] {
         get {
-            var result = [SFArticleProtocol]()
-            for article in articlesDB {
-                if let obj = article as? SFArticleProtocol {
-                    result += [obj]
-                }
-            }
-            return result;
+            return Array(articlesDB)
         }
     }
     
@@ -33,7 +26,6 @@ class SFFeedRealm: Object, SFFeedProtocol {
         self.url = value.url
         
         for article in value.articles {
-//            self.articles += [SFArticleRealm(article: article) as SFArticleProtocol]
             let articleRealm = SFArticleRealm(article: article)
             self.articlesDB.append(articleRealm)
         }
