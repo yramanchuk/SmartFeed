@@ -10,7 +10,7 @@ import UIKit
 
 class SFFeedDetailListController: UITableViewController {
 
-    var selectedFeed: SFFeed? {
+    var selectedFeed: SFFeedProtocol? {
         didSet {
 //            self.tableView.reloadData()
         }

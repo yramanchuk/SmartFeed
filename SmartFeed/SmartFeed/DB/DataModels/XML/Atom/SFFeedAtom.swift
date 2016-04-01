@@ -11,7 +11,7 @@ import UIKit
 class SFFeedAtom: SFFeed {
     var entry: [SFArticleAtom] = [SFArticleAtom]()
     
-    override var articles: [SFArticle] {
+    override var articles: [SFArticleProtocol] {
         get {
             return entry;
         }

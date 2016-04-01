@@ -9,13 +9,13 @@
 import EVReflection
 
 
-class SFFeed: EVObject {
+class SFFeed: EVObject, SFFeedProtocol {
 
     var title: String?
-    var url: String!
+    var url: String?
     
     
-    private(set) var articles: [SFArticle] = [SFArticle]()
+    private(set) var articles: [SFArticleProtocol] = []
     
     override var debugDescription : String {
         return "\(title) \(articles)"

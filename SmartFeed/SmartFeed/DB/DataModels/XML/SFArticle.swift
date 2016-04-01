@@ -8,12 +8,12 @@
 
 import EVReflection
 
-class SFArticle: EVObject {
+class SFArticle: EVObject, SFArticleProtocol {
     var Name: String = "entry" // Using the default mapping
     
     var title: String?
 
-    private(set) var linkURL: String?
+    var linkURL: String?
     
     
     override var debugDescription: String {

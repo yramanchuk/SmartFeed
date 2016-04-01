@@ -22,6 +22,8 @@ class SFArticleAtom: SFArticle {
             
             return ""
         }
+        
+        set {}
     }
     
 //    override func propertyConverters() -> [(String?, ((Any?)->())?, (() -> Any?)? )] {

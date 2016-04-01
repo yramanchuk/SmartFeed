@@ -12,9 +12,15 @@ class SFFeedRss: SFFeed {
 
     var item: [SFArticleRss] =  [SFArticleRss]()
  
-    override var articles: [SFArticle] {
+    override var articles: [SFArticleProtocol] {
         get {
-            return item;
+            var result = [SFArticleProtocol]()
+            for article in item {
+                if let obj = article as? SFArticleProtocol {
+                    result += [obj]
+                }
+            }
+            return result;
         }
     }
 

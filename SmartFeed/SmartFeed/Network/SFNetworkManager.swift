@@ -26,6 +26,13 @@ class SFNetworkManager {
         Alamofire.request(.GET, url).responseObject
             {(result: Result<SFRss, NSError>) -> Void in
 //                debugPrint(result.value?.channel)
+                if result.error == nil {
+                    let feedRealm = SFFeedRealm(withProtocol: (result.value?.channel)!)
+                    SFModelManager.sharedInstatnce.updateFeed(feedRealm)
+                    print(SFModelManager.sharedInstatnce.getAllFeeds())
+
+                }
+                
                 completionHandler(result: result.value?.channel, error: result.error)
         }
     }

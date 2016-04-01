@@ -15,6 +15,8 @@ class SFArticleRss: SFArticle {
         get {
             return link
         }
+        
+        set {}
     }
     
     

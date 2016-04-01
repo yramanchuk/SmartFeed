@@ -16,7 +16,7 @@ class SFArticleDetailController: UIViewController {
     var readability: DZReadability?
 
 
-    var article: SFArticle! {
+    var article: SFArticleProtocol! {
         didSet {
             // Update the view.
             self.configureView()

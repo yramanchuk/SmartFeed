@@ -12,7 +12,7 @@ import Alamofire
 class SFFeedListController: UITableViewController {
 
     var detailViewController: SFArticleDetailController? = nil
-    var objects = [SFFeed]() {
+    var objects = [SFFeedProtocol]() {
         didSet {
 //            self.tableView.reloadData()
         }
@@ -30,10 +30,10 @@ class SFFeedListController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? SFArticleDetailController
         }
         
-//        let allFeeds = SFModelManager.sharedInstatnce.getAllFeeds()
-//        for feed in allFeeds {
-//            insertObject(nil, object: feed)
-//        }
+        let allFeeds = SFModelManager.sharedInstatnce.getAllFeeds()
+        for feed in allFeeds {
+            insertObject(nil, object: feed)
+        }
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -96,7 +96,7 @@ class SFFeedListController: UITableViewController {
     
     }
 
-    func insertObject(sender: AnyObject?, object:SFFeed) {
+    func insertObject(sender: AnyObject?, object:SFFeedProtocol) {
         objects.insert(object, atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
