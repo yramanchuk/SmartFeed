@@ -8,7 +8,7 @@
 
 
 
-protocol SFFeedProtocol {
+@objc protocol SFFeedProtocol {
     var title: String? {get set}
     var url: String? {get set}
 

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Yury Ramanchuk. All rights reserved.
 //
 
-protocol SFArticleProtocol {
+@objc protocol SFArticleProtocol {
     var title: String? {get set}
     var linkURL: String? {get set}
 
