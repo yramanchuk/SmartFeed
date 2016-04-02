@@ -25,12 +25,15 @@ class SFNetworkManager {
     func feelFeedRss(url: String, completionHandler: (result: SFFeed?, error: NSError?) -> Void) {
         Alamofire.request(.GET, url).responseObject
             {(result: Result<SFRss, NSError>) -> Void in
+                let feed = result.value?.channel
                 if result.error == nil {
-                    SFModelManager.sharedInstatnce.updateFeedAsync((result.value?.channel)!)
-
+                    
+                    //can improve with async; use completion block as param
+                    feed!.feedId = SFModelManager.sharedInstatnce.updateFeedSync(feed!)
+                    
                 }
                 
-                completionHandler(result: result.value?.channel, error: result.error)
+                completionHandler(result: feed, error: result.error)
         }
     }
 

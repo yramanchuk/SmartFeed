@@ -19,17 +19,24 @@ class SFModelManager {
         return Array(feeds)
     }
 
-    func updateFeedAsync(feed: SFFeedProtocol) -> Void {
+    func getFeed(feedID: String!) -> SFFeedProtocol {
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let realm = try! Realm()
-            
-            let feedRealm = SFFeedRealm(withProtocol: feed)
-            
-            try! realm.write {
-                realm.add(feedRealm)
-            }
+        let realm = try! Realm()
+        
+        return realm.objectForPrimaryKey(SFFeedRealm.self, key: feedID) as! SFFeedProtocol
+    }
+
+    func updateFeedSync(feed: SFFeedProtocol) -> String {
+        
+        let realm = try! Realm()
+        
+        let feedRealm = SFFeedRealm(withProtocol: feed)
+        
+        try! realm.write {
+            realm.add(feedRealm)
         }
+        
+        return feedRealm.feedId
     }
     
     
@@ -40,6 +47,7 @@ class SFModelManager {
 
             if let feedRealm = realm.objectForPrimaryKey(SFFeedRealm.self, key: feedID) {
                 try! realm.write {
+                    realm.delete(feedRealm.articlesDB)
                     realm.delete(feedRealm)
                 }
             }
