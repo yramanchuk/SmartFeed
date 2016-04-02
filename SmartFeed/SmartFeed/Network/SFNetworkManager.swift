@@ -25,11 +25,8 @@ class SFNetworkManager {
     func feelFeedRss(url: String, completionHandler: (result: SFFeed?, error: NSError?) -> Void) {
         Alamofire.request(.GET, url).responseObject
             {(result: Result<SFRss, NSError>) -> Void in
-//                debugPrint(result.value?.channel)
                 if result.error == nil {
-                    let feedRealm = SFFeedRealm(withProtocol: (result.value?.channel)!)
-                    SFModelManager.sharedInstatnce.updateFeed(feedRealm)
-                    print(SFModelManager.sharedInstatnce.getAllFeeds())
+                    SFModelManager.sharedInstatnce.updateFeedAsync((result.value?.channel)!)
 
                 }
                 

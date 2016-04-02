@@ -11,6 +11,7 @@
 @objc protocol SFFeedProtocol {
     var title: String? {get set}
     var url: String? {get set}
+    var feedId: String! {get}
 
     var articles: [SFArticleProtocol] {get}
 

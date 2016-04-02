@@ -13,6 +13,7 @@ class SFFeed: EVObject, SFFeedProtocol {
 
     var title: String?
     var url: String?
+    var feedId: String!
     
     
     private(set) var articles: [SFArticleProtocol] = []
