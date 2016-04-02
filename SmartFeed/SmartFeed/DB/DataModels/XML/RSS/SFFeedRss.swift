@@ -14,13 +14,7 @@ class SFFeedRss: SFFeed {
  
     override var articles: [SFArticleProtocol] {
         get {
-            var result = [SFArticleProtocol]()
-            for article in item {
-                if let obj = article as? SFArticleProtocol {
-                    result += [obj]
-                }
-            }
-            return result;
+            return item
         }
     }
 
