@@ -74,26 +74,9 @@ class SFFeedListController: UITableViewController {
                 }
             }
         }
-            
-//            { (Dictionary<String, [String]>) -> Void in
-//            
-//            
-//        }
-        
+                    
         self.presentViewController(vc, animated: true, completion: nil)
         
-//        SFNetworkManager.sharedInstatnce.feelFeedAtom("http://tema.livejournal.com/data/atom") { (result, error) in
-//            if error == nil {
-//                self.insertObject(sender, object: result!)
-//            }
-//        }
-//
-//        SFNetworkManager.sharedInstatnce.feelFeedRss("http://kyky.org/rss.xml") { (result, error) in
-//            if error == nil {
-//                self.insertObject(sender, object: result!)
-//            }
-//        }
-    
     }
 
     func insertObject(sender: AnyObject?, object:SFFeedProtocol) {

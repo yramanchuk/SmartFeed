@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DGElasticPullToRefresh
 
 class SFFeedDetailListController: UITableViewController {
 
@@ -24,6 +25,22 @@ class SFFeedDetailListController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
+        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+
+            SFNetworkManager.sharedInstatnce.feelFeedRss((self?.selectedFeed?.link)!, completionHandler: { (result, error) in
+                if error == nil {
+                    self?.selectedFeed = result
+                    self?.tableView.reloadData()
+                    self?.tableView.dg_stopLoading()
+                }
+            })
+            
+            }, loadingView: loadingView)
+        tableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,5 +120,8 @@ class SFFeedDetailListController: UITableViewController {
         }
     }
 
+    deinit {
+        self.tableView.dg_removePullToRefresh()
+    }
 
 }

@@ -10,7 +10,7 @@ import RealmSwift
 
 class SFFeedRealm: Object, SFFeedProtocol {
     dynamic var title: String?
-    dynamic var url: String?
+    dynamic var link: String?
     
     let articlesDB = List<SFArticleRealm>()
     
@@ -28,7 +28,7 @@ class SFFeedRealm: Object, SFFeedProtocol {
     convenience init(withProtocol value: SFFeedProtocol) {
         self.init()
         self.title = value.title
-        self.url = value.url
+        self.link = value.link
         
         if value.feedId != nil {
             self.feedId = value.feedId

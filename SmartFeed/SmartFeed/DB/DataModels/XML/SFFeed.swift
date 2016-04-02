@@ -12,7 +12,7 @@ import EVReflection
 class SFFeed: EVObject, SFFeedProtocol {
 
     var title: String?
-    var url: String?
+    var link: String?
     var feedId: String!
     
     

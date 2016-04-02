@@ -20,6 +20,14 @@ target 'SmartFeed' do
 #obj-c libs https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html
 #    pod 'HTMLReader', '0.9.5'
 #    pod 'DZReadability', '0.2.3'
+
+    pod 'FontAwesome.swift'
+    pod 'Whisper' #display new feeds alert
+    
+    pod 'DGElasticPullToRefresh'
+#    pod 'Refresher' #alternative to DGElasticPullToRefresh
+
+
 end
 
 target 'SmartFeedTests' do

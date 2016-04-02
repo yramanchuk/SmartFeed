@@ -19,24 +19,57 @@ class SFModelManager {
         return Array(feeds)
     }
 
-    func getFeed(feedID: String!) -> SFFeedProtocol {
+    func getFeed(feedID: String!) -> SFFeedProtocol? {
         
         let realm = try! Realm()
         
-        return realm.objectForPrimaryKey(SFFeedRealm.self, key: feedID) as! SFFeedProtocol
+        return realm.objectForPrimaryKey(SFFeedRealm.self, key: feedID) as? SFFeedProtocol
     }
 
+    func getFeed(byLink feedUrl: String!) -> SFFeedProtocol? {
+        
+        let realm = try! Realm()
+        
+        return realm.objects(SFFeedRealm).filter("link == '\(feedUrl)'").first as? SFFeedProtocol
+    }
+
+    
     func updateFeedSync(feed: SFFeedProtocol) -> String {
         
         let realm = try! Realm()
+        var feedId: String!
         
-        let feedRealm = SFFeedRealm(withProtocol: feed)
-        
-        try! realm.write {
-            realm.add(feedRealm)
+        if let createdFeed = self.getFeed(byLink: feed.link) as! SFFeedRealm! {
+
+            
+            try! realm.write {
+            
+                realm.delete(createdFeed.articlesDB)
+                createdFeed.articlesDB.removeAll()
+                
+                for article in feed.articles {
+                    let articleRealm = SFArticleRealm(article: article)
+                    createdFeed.articlesDB.append(articleRealm)
+                }
+
+                realm.add(createdFeed)
+            }
+            
+            feedId = createdFeed.feedId
+
+        } else {
+            let feedRealm = SFFeedRealm(withProtocol: feed)
+            
+            
+            try! realm.write {
+                realm.add(feedRealm)
+            }
+            
+            feedId = feedRealm.feedId
         }
         
-        return feedRealm.feedId
+        
+        return feedId
     }
     
     
