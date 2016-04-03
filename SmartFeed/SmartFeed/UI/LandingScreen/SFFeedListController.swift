@@ -41,20 +41,23 @@ class SFFeedListController: UITableViewController {
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
             
             var counter = allFeeds.count - 1
-
-            for index in 0...counter {
-                let feed = allFeeds[index]
-                SFNetworkManager.sharedInstatnce.feelFeedRss((feed.link)!, completionHandler: { (result, error) in
-                    if error == nil {
-                        self!.objects[index] = result!
-                        counter -= 1
-                        if counter == 0 {
-                            self?.tableView.reloadData()
-                            self?.tableView.dg_stopLoading()
-
+            if counter > 0 {
+                for index in 0...counter {
+                    let feed = allFeeds[index]
+                    SFNetworkManager.sharedInstatnce.feelFeedRss((feed.link)!, completionHandler: { (result, error) in
+                        if error == nil {
+                            self!.objects[index] = result!
+                            counter -= 1
+                            if counter == 0 {
+                                self?.tableView.reloadData()
+                                self?.tableView.dg_stopLoading()
+                                
+                            }
                         }
-                    }
-                })
+                    })
+                }
+            } else {
+                self?.tableView.dg_stopLoading()
             }
 
             
