@@ -56,6 +56,7 @@ class SFFeedListController: UITableViewController {
         loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
             
+            let allFeeds = SFModelManager.sharedInstatnce.getAllFeeds()
             var counter = allFeeds.count - 1
             if counter > 0 {
                 for index in 0...counter {
