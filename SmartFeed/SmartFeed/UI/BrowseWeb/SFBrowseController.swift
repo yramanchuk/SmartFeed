@@ -82,34 +82,34 @@ class SFBrowseController: UIViewController {
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if (keyPath == "loading" && !self.webView.loading) {
-
-            self.btnBack.enabled = self.webView.canGoBack
-            self.btnForward.enabled = self.webView.canGoForward
-            self.btnAdd.enabled = false;
+        if keyPath == "loading" {
             
-            self.urlTextFiled.text = self.webView.URL?.absoluteString
-            
-            self.webView.evaluateJavaScript("getRssLinks(\'\(FeedType.kRSS)\', \'\(FeedType.kAtom)\')", completionHandler: { (result, error) in
-                if (error == nil) {
-                    if let resultDict: Dictionary<String, [String]> = result as? Dictionary {
-                        print(resultDict)
-                        self.detectedFeeds = resultDict
-                        
-//                        self.btnAdd.enabled = (!self.detectedFeeds![FeedType.kAtom]?.isEmpty || !self.detectedFeeds![FeedType.kRSS]?.isEmpty)
-                        self.btnAdd.enabled = !((self.detectedFeeds![FeedType.kAtom]?.isEmpty)! && (self.detectedFeeds![FeedType.kRSS]?.isEmpty)!)
-
-                    
+            if  !self.webView.loading {
+                self.btnBack.enabled = self.webView.canGoBack
+                self.btnForward.enabled = self.webView.canGoForward
+                self.btnAdd.enabled = false;
+                
+                self.urlTextFiled.text = self.webView.URL?.absoluteString
+                
+                self.webView.evaluateJavaScript("getRssLinks(\'\(FeedType.kRSS)\', \'\(FeedType.kAtom)\')", completionHandler: { (result, error) in
+                    if (error == nil) {
+                        if let resultDict: Dictionary<String, [String]> = result as? Dictionary {
+                            print(resultDict)
+                            self.detectedFeeds = resultDict
+                            self.btnAdd.enabled = !((self.detectedFeeds![FeedType.kAtom]?.isEmpty)! && (self.detectedFeeds![FeedType.kRSS]?.isEmpty)!)
+                            
+                            
+                        } else {
+                            self.detectedFeeds = nil
+                        }
                     } else {
+                        debugPrint(error!)
                         self.detectedFeeds = nil
                     }
-                } else {
-                    debugPrint(error!)
-                    self.detectedFeeds = nil
-                }
-                
-                
-            })
+                })
+            } else {
+                self.btnAdd.enabled = false
+            }
         }
     }
     
