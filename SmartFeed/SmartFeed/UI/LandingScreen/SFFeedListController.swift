@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import DGElasticPullToRefresh
 
 class SFFeedListController: UITableViewController {
 
@@ -34,6 +35,34 @@ class SFFeedListController: UITableViewController {
         for feed in allFeeds {
             insertObject(nil, object: feed)
         }
+        
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
+        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            
+            var counter = allFeeds.count - 1
+
+            for index in 0...counter {
+                let feed = allFeeds[index]
+                SFNetworkManager.sharedInstatnce.feelFeedRss((feed.link)!, completionHandler: { (result, error) in
+                    if error == nil {
+                        self!.objects[index] = result!
+                        counter -= 1
+                        if counter == 0 {
+                            self?.tableView.reloadData()
+                            self?.tableView.dg_stopLoading()
+
+                        }
+                    }
+                })
+            }
+
+            
+            
+            }, loadingView: loadingView)
+        tableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -80,8 +109,8 @@ class SFFeedListController: UITableViewController {
     }
 
     func insertObject(sender: AnyObject?, object:SFFeedProtocol) {
-        objects.insert(object, atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        objects.append(object)
+        let indexPath = NSIndexPath(forRow: objects.count - 1, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
 
@@ -132,6 +161,10 @@ class SFFeedListController: UITableViewController {
         }
     }
 
+
+    deinit {
+        self.tableView.dg_removePullToRefresh()
+    }
 
 }
 
