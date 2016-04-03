@@ -15,6 +15,7 @@ class SFArticle: EVObject, SFArticleProtocol {
 
     var linkURL: String?
     
+    var isNew = true
     
     override var debugDescription: String {
         return "\(title) \(linkURL)"

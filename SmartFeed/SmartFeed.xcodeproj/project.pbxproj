@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A211193993F97DAF16DEB04A /* Pods_SmartFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C280389EBC5FE9FEAC85A6 /* Pods_SmartFeed.framework */; };
+		CB08C56C1CB162AA00D6C63F /* SFFeedDetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08C56B1CB162AA00D6C63F /* SFFeedDetailListCell.swift */; };
 		CB34D7CA1CA536CF00162CC6 /* SFNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB34D7C91CA536CF00162CC6 /* SFNetworkManager.swift */; };
 		CB3C090B1CA9D16900B6AE65 /* DZReadability.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08DF1CA9D16900B6AE65 /* DZReadability.m */; };
 		CB3C090C1CA9D16900B6AE65 /* GGReadabilityParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C08E21CA9D16900B6AE65 /* GGReadabilityParser.m */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		30BD5343AA25C50BF723FD43 /* Pods-SmartFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeed/Pods-SmartFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		83C280389EBC5FE9FEAC85A6 /* Pods_SmartFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB08C56B1CB162AA00D6C63F /* SFFeedDetailListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedDetailListCell.swift; sourceTree = "<group>"; };
 		CB34D7C91CA536CF00162CC6 /* SFNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFNetworkManager.swift; sourceTree = "<group>"; };
 		CB3C08D81CA9D15800B6AE65 /* SmartFeed-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartFeed-Bridging-Header.h"; sourceTree = "<group>"; };
 		CB3C08DE1CA9D16900B6AE65 /* DZReadability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZReadability.h; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 			children = (
 				CBDE98D31CA44EE8001B89F6 /* SFArticleDetailController.swift */,
 				CBAB29C51CA47D450079F566 /* SFFeedDetailListController.swift */,
+				CB08C56B1CB162AA00D6C63F /* SFFeedDetailListCell.swift */,
 			);
 			path = ReadFeed;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				CB94F43C1CAE9251006EA9F7 /* SFArticleRss.swift in Sources */,
 				CB3C09151CA9D16900B6AE65 /* HTMLParser.m in Sources */,
 				CBDE98D41CA44EE8001B89F6 /* SFFeedListController.swift in Sources */,
+				CB08C56C1CB162AA00D6C63F /* SFFeedDetailListCell.swift in Sources */,
 				CBDE98DD1CA465F0001B89F6 /* SFModelManager.swift in Sources */,
 				CB3C091A1CA9D16900B6AE65 /* HTMLTextNode.m in Sources */,
 				CB3C090B1CA9D16900B6AE65 /* DZReadability.m in Sources */,

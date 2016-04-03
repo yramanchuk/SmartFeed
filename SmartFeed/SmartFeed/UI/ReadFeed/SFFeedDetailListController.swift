@@ -60,9 +60,10 @@ class SFFeedDetailListController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell", forIndexPath: indexPath) as! SFFeedDetailListCell
 
-        cell.textLabel?.text = selectedFeed?.articles[indexPath.row].title
+        cell.lblTitle.text = selectedFeed?.articles[indexPath.row].title
+//        cell.textLabel?.text = selectedFeed?.articles[indexPath.row].title
         // Configure the cell...
 
         return cell

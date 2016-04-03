@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import DGElasticPullToRefresh
+import FontAwesome_swift
 
 class SFFeedListController: UITableViewController {
 
@@ -22,9 +23,24 @@ class SFFeedListController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        let editButton = UIBarButtonItem()
+        editButton.target = self.editButtonItem().target
+        editButton.action = self.editButtonItem().action
+        let attributesEdit = [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!
+        editButton.setTitleTextAttributes(attributesEdit, forState: .Normal)
+        editButton.title = String.fontAwesomeIconWithName(.Gear)
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(SFFeedListController.insertNewObject(_:)))
+        
+        self.navigationItem.leftBarButtonItem = editButton //self.editButtonItem()
+
+        let addButton = UIBarButtonItem()
+        addButton.target = self
+        addButton.action = #selector(SFFeedListController.insertNewObject(_:))
+        let attributes = [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!
+        addButton.setTitleTextAttributes(attributes, forState: .Normal)
+        addButton.title = String.fontAwesomeIconWithName(.PlusSquare)
+        
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
@@ -161,6 +177,15 @@ class SFFeedListController: UITableViewController {
             
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
+    }
+    
+    override func setEditing(editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        if editing {
+            self.navigationItem.leftBarButtonItem!.title = String.fontAwesomeIconWithName(.CheckSquare)
+        } else {
+            self.navigationItem.leftBarButtonItem!.title = String.fontAwesomeIconWithName(.Gear)
         }
     }
 

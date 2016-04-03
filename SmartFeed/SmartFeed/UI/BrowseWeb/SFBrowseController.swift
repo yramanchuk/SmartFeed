@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import FontAwesome_swift
 
 class SFBrowseController: UIViewController {
 
@@ -59,6 +60,19 @@ class SFBrowseController: UIViewController {
         self.btnAdd.enabled = false;
         self.btnBack.enabled = false;
         self.btnForward.enabled = false;
+        
+        self.btnAdd.titleLabel?.font = UIFont.fontAwesomeOfSize(15)
+        self.btnAdd.setTitle(String.fontAwesomeIconWithName(.RSSSquare), forState: .Normal)
+
+        self.btnClose.titleLabel?.font = UIFont.fontAwesomeOfSize(15)
+        self.btnClose.setTitle(String.fontAwesomeIconWithName(.Close), forState: .Normal)
+
+        self.btnBack.titleLabel?.font = UIFont.fontAwesomeOfSize(15)
+        self.btnBack.setTitle(String.fontAwesomeIconWithName(.ArrowLeft), forState: .Normal)
+
+        self.btnForward.titleLabel?.font = UIFont.fontAwesomeOfSize(15)
+        self.btnForward.setTitle(String.fontAwesomeIconWithName(.ArrowRight), forState: .Normal)
+
         
     }
 

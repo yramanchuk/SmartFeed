@@ -9,5 +9,5 @@
 @objc protocol SFArticleProtocol {
     var title: String? {get set}
     var linkURL: String? {get set}
-
+    var isNew: Bool {get set}
 }

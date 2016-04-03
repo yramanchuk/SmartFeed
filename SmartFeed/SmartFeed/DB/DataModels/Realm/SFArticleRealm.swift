@@ -11,10 +11,12 @@ import RealmSwift
 class SFArticleRealm: Object, SFArticleProtocol {
     dynamic var title: String?
     dynamic var linkURL: String?
+    dynamic var isNew = true
 
     convenience init(article: SFArticleProtocol) {
         self.init()
         self.title = article.title
         self.linkURL = article.linkURL
+        self.isNew = article.isNew
     }
 }
