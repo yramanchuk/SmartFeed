@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import FontAwesome_swift
 
-class SFBrowseController: UIViewController {
+class SFBrowseController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var containerView: UIView!
     var webView: WKWebView!

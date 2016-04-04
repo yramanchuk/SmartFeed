@@ -11,7 +11,7 @@ import Alamofire
 import DGElasticPullToRefresh
 import FontAwesome_swift
 
-class SFFeedListController: UITableViewController {
+class SFFeedListController: UITableViewController, UINavigationBarDelegate {
 
     var detailViewController: SFArticleDetailController? = nil
     var objects = [SFFeedProtocol]() {
@@ -158,10 +158,13 @@ class SFFeedListController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SFFeedListCell
 
         let object = objects[indexPath.row]
-        cell.textLabel!.text = object.title
+        cell.lblTitle!.text = object.title
+        cell.btnCount.setTitle("\(object.articles.filter{ $0.isNew }.count)", forState: .Normal)
+        
+        
         return cell
     }
 
@@ -188,6 +191,14 @@ class SFFeedListController: UITableViewController {
         } else {
             self.navigationItem.leftBarButtonItem!.title = String.fontAwesomeIconWithName(.Gear)
         }
+    }
+    
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        if parent == self.navigationController && self.navigationController?.topViewController == self {
+//            "Back pressed"
+//            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+            self.tableView.reloadData()
+       }
     }
 
 

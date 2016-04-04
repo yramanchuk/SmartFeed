@@ -53,6 +53,7 @@
 		CBDE98D41CA44EE8001B89F6 /* SFFeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98D11CA44EE8001B89F6 /* SFFeedListController.swift */; };
 		CBDE98D51CA44EE8001B89F6 /* SFArticleDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98D31CA44EE8001B89F6 /* SFArticleDetailController.swift */; };
 		CBDE98DD1CA465F0001B89F6 /* SFModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98DC1CA465F0001B89F6 /* SFModelManager.swift */; };
+		CBF5EAF51CB2D6E7000CB508 /* SFFeedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5EAF41CB2D6E7000CB508 /* SFFeedListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,7 @@
 		CBDE98D11CA44EE8001B89F6 /* SFFeedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedListController.swift; sourceTree = "<group>"; };
 		CBDE98D31CA44EE8001B89F6 /* SFArticleDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFArticleDetailController.swift; sourceTree = "<group>"; };
 		CBDE98DC1CA465F0001B89F6 /* SFModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFModelManager.swift; sourceTree = "<group>"; };
+		CBF5EAF41CB2D6E7000CB508 /* SFFeedListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedListCell.swift; sourceTree = "<group>"; };
 		D20CE6A34BAE61D4135E32A0 /* Pods-SmartFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeed/Pods-SmartFeed.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				CBDE98D11CA44EE8001B89F6 /* SFFeedListController.swift */,
+				CBF5EAF41CB2D6E7000CB508 /* SFFeedListCell.swift */,
 			);
 			path = LandingScreen;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				CB8B426A1CA4335200DEAAC7 /* AppDelegate.swift in Sources */,
 				CB3C09171CA9D16900B6AE65 /* HTMLSelector.m in Sources */,
 				CB3C091D1CA9D16900B6AE65 /* NSString+HTMLEntities.m in Sources */,
+				CBF5EAF51CB2D6E7000CB508 /* SFFeedListCell.swift in Sources */,
 				CB94F43B1CAE9251006EA9F7 /* SFFeedAtom.swift in Sources */,
 				CB3C09181CA9D16900B6AE65 /* HTMLSerialization.m in Sources */,
 				CB3C091C1CA9D16900B6AE65 /* HTMLTreeEnumerator.m in Sources */,
