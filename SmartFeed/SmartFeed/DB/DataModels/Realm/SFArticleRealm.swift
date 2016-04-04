@@ -13,10 +13,21 @@ class SFArticleRealm: Object, SFArticleProtocol {
     dynamic var linkURL: String?
     dynamic var isNew = true
 
+    override static func primaryKey() -> String? {
+        return "articleId"
+    }
+    dynamic var articleId: String!
+
     convenience init(article: SFArticleProtocol) {
         self.init()
         self.title = article.title
         self.linkURL = article.linkURL
         self.isNew = article.isNew
+        
+        if article.articleId != nil {
+            self.articleId = article.articleId
+        } else {
+            self.articleId = NSUUID().UUIDString
+        }
     }
 }

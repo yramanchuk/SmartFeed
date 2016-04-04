@@ -12,10 +12,11 @@ class SFArticle: EVObject, SFArticleProtocol {
     var Name: String = "entry" // Using the default mapping
     
     var title: String?
-
     var linkURL: String?
     
     var isNew = true
+    var articleId: String!
+
     
     override var debugDescription: String {
         return "\(title) \(linkURL)"

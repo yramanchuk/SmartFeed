@@ -62,10 +62,11 @@ class SFFeedDetailListController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell", forIndexPath: indexPath) as! SFFeedDetailListCell
 
-        cell.lblTitle.text = selectedFeed?.articles[indexPath.row].title
-//        cell.textLabel?.text = selectedFeed?.articles[indexPath.row].title
-        // Configure the cell...
-
+        if let cellArticle = selectedFeed?.articles[indexPath.row] {
+            cell.lblTitle.text = cellArticle.title
+            cell.btnNew.hidden = !cellArticle.isNew
+        }
+        
         return cell
     }
     
@@ -117,6 +118,8 @@ class SFFeedDetailListController: UITableViewController {
                 controller.article = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
+                
+                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
             }
         }
     }

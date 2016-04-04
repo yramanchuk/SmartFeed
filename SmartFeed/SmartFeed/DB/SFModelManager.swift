@@ -72,6 +72,16 @@ class SFModelManager {
         return feedId
     }
     
+    func setReadArticleSync(articleUrl: String, isNew: Bool) -> Void {
+        let realm = try! Realm()
+        let articles = realm.objects(SFArticleRealm).filter("linkURL == '\(articleUrl)'")
+        try! realm.write {
+            articles.setValue(isNew, forKeyPath: "isNew")
+            realm.add(articles, update: true)
+        }
+        
+    }
+    
     
     func deleteFeedAsync(feedID: String!) -> Void {
         
@@ -79,6 +89,8 @@ class SFModelManager {
             let realm = try! Realm()
 
             if let feedRealm = realm.objectForPrimaryKey(SFFeedRealm.self, key: feedID) {
+                
+                debugPrint("deleting \(feedRealm.title)")
                 try! realm.write {
                     realm.delete(feedRealm.articlesDB)
                     realm.delete(feedRealm)

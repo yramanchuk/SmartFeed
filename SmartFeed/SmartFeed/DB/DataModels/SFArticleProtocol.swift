@@ -10,4 +10,6 @@
     var title: String? {get set}
     var linkURL: String? {get set}
     var isNew: Bool {get set}
+    var articleId: String! {get}
+    
 }
