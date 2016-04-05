@@ -32,11 +32,17 @@ class SFArticleDetailController: UIViewController {
 //                wv.loadRequest(req)
 
                 self.readability = DZReadability.init(URLToDownload: NSURL(string: article.linkURL!), options: nil, completionHandler: { (sender, content, error) in
-                    wv.loadHTMLString(content, baseURL: nil)
+                    if content != nil {
+                        wv.loadHTMLString(content, baseURL: nil)
+                    } else {
+                        wv.loadHTMLString("<h1>Can not display content</h1>", baseURL: nil)
+                    }
                 })
                 self.readability?.start()
 
             }
+
+            self.title = article.title
 
         }
     }

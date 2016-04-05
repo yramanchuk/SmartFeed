@@ -14,6 +14,7 @@ class SFFeedDetailListController: UITableViewController {
     var selectedFeed: SFFeedProtocol? {
         didSet {
 //            self.tableView.reloadData()
+            self.title = selectedFeed?.title
         }
     }
     

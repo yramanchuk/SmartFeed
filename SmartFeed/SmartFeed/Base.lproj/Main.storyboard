@@ -20,6 +20,17 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQP-Eo-1BK">
                                 <rect key="frame" x="0.0" y="59" width="600" height="541"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ShN-nc-kCw">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="5"/>
+                                        <color key="tintColor" red="0.058823529411764705" green="0.47450980392156861" blue="0.99607843137254903" alpha="0.5" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ShN-nc-kCw" firstAttribute="width" secondItem="oQP-Eo-1BK" secondAttribute="width" id="AVQ-7f-Ok4"/>
+                                    <constraint firstItem="ShN-nc-kCw" firstAttribute="top" secondItem="oQP-Eo-1BK" secondAttribute="top" id="DVD-NG-gQo"/>
+                                    <constraint firstItem="ShN-nc-kCw" firstAttribute="centerX" secondItem="oQP-Eo-1BK" secondAttribute="centerX" id="OGq-bG-VPI"/>
+                                </constraints>
                             </view>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4L-Lu-Zsv">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
@@ -109,6 +120,7 @@
                         <outlet property="btnForward" destination="I0U-3e-gH7" id="1VM-VH-iHL"/>
                         <outlet property="containerView" destination="oQP-Eo-1BK" id="odJ-cV-9VI"/>
                         <outlet property="urlTextFiled" destination="eib-lW-3S8" id="Oc3-D7-BPe"/>
+                        <outlet property="webProgressView" destination="ShN-nc-kCw" id="kj8-Ar-dDC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIZ-dX-dts" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -293,7 +305,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Smart Feed" id="Zdf-7t-Un8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -316,6 +328,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rLF-Cn-Rg4"/>
+        <segue reference="D9t-CP-NLT"/>
     </inferredMetricsTieBreakers>
 </document>

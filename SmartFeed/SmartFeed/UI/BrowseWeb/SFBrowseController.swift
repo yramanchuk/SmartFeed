@@ -12,8 +12,11 @@ import FontAwesome_swift
 
 class SFBrowseController: UIViewController, UITextFieldDelegate {
 
+    let initUrl = "www.feedcamp.com/top-feeds"
+    
     @IBOutlet weak var containerView: UIView!
     var webView: WKWebView!
+    @IBOutlet weak var webProgressView: UIProgressView!
     @IBOutlet weak var urlTextFiled: UITextField!
     
     @IBOutlet weak var btnClose: UIButton!
@@ -26,6 +29,7 @@ class SFBrowseController: UIViewController, UITextFieldDelegate {
 
     deinit {
         self.webView!.removeObserver(self, forKeyPath: "loading", context: nil)
+        self.webView!.removeObserver(self, forKeyPath: "estimatedProgress", context: nil)
     }
 
     override func viewDidLoad() {
@@ -42,6 +46,7 @@ class SFBrowseController: UIViewController, UITextFieldDelegate {
         self.webView.customUserAgent = userAgent
         
         self.containerView.addSubview(self.webView)
+        self.containerView.sendSubviewToBack(self.webView)
         
         self.webView!.translatesAutoresizingMaskIntoConstraints = false
         let height = NSLayoutConstraint(item: self.containerView, attribute: .Height, relatedBy: .Equal, toItem: self.webView, attribute: .Height, multiplier: 1, constant: 0)
@@ -51,8 +56,8 @@ class SFBrowseController: UIViewController, UITextFieldDelegate {
         self.containerView.addConstraints([height, width, bottom, left])
         
         self.webView.addObserver(self, forKeyPath: "loading", options: .New, context: nil)
-        
-        let initUrl = "tut.by"
+        self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
+       
         self.urlTextFiled.text = initUrl
         self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://\(initUrl)")!))
         
@@ -110,7 +115,19 @@ class SFBrowseController: UIViewController, UITextFieldDelegate {
             } else {
                 self.btnAdd.enabled = false
             }
+        } else if keyPath == "estimatedProgress" {
+            self.webProgressView.setProgress(Float(self.webView.estimatedProgress), animated: true)
+            if (self.webView.estimatedProgress >= 1) {
+                UIView.animateWithDuration(0.3, delay: 0.5, options: .CurveEaseOut, animations: {
+                    self.webProgressView.alpha = 0;
+                    }, completion: { (finished) in
+                        self.webProgressView.setProgress(0, animated: false)
+                })
+            } else {
+                self.webProgressView.alpha = 1;
+            }
         }
+        
     }
     
     @IBAction func onBack(sender: AnyObject) {
