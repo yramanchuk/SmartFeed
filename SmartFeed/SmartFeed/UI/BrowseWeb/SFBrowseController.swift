@@ -12,7 +12,7 @@ import FontAwesome_swift
 
 class SFBrowseController: UIViewController, UITextFieldDelegate {
 
-    let initUrl = "www.feedcamp.com/top-feeds"
+    let initUrl = "google.com"
     
     @IBOutlet weak var containerView: UIView!
     var webView: WKWebView!
