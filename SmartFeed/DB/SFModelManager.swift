@@ -13,7 +13,7 @@ class SFModelManager {
     
     func getAllFeeds() -> [SFFeedProtocol] {
 
-        let realm = try! Realm()
+        let realm = self.realm()
         let feeds = realm.objects(SFFeedRealm)
 
         return Array(feeds)
@@ -21,14 +21,14 @@ class SFModelManager {
 
     func getFeed(feedID: String!) -> SFFeedProtocol? {
         
-        let realm = try! Realm()
+        let realm = self.realm()
         
         return realm.objectForPrimaryKey(SFFeedRealm.self, key: feedID) as? SFFeedProtocol
     }
 
     func getFeed(byLink feedUrl: String!) -> SFFeedProtocol? {
         
-        let realm = try! Realm()
+        let realm = self.realm()
         
         return realm.objects(SFFeedRealm).filter("link == '\(feedUrl)'").first as? SFFeedProtocol
     }
@@ -36,7 +36,7 @@ class SFModelManager {
     
     func updateFeedSync(feed: SFFeedProtocol) -> String {
         
-        let realm = try! Realm()
+        let realm = self.realm()
         var feedId: String!
         
         if let createdFeed = self.getFeed(byLink: feed.link) as! SFFeedRealm! {
@@ -73,7 +73,7 @@ class SFModelManager {
     }
     
     func setReadArticleSync(articleUrl: String, isNew: Bool) -> Void {
-        let realm = try! Realm()
+        let realm = self.realm()
         let articles = realm.objects(SFArticleRealm).filter("linkURL == '\(articleUrl)'")
         try! realm.write {
             articles.setValue(isNew, forKeyPath: "isNew")
@@ -86,7 +86,7 @@ class SFModelManager {
     func deleteFeedAsync(feedID: String!) -> Void {
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let realm = try! Realm()
+            let realm = self.realm()
 
             if let feedRealm = realm.objectForPrimaryKey(SFFeedRealm.self, key: feedID) {
                 
@@ -97,6 +97,13 @@ class SFModelManager {
                 }
             }
         }
+    }
+    
+    func realm() -> Realm {
+        if isTestMode {
+            return try! Realm(configuration: Realm.Configuration(path: nil, inMemoryIdentifier: TEST_MODE, encryptionKey: nil, readOnly: false, schemaVersion: 0, migrationBlock: nil, objectTypes: nil))
+        }
+        return try! Realm()
     }
 
 }

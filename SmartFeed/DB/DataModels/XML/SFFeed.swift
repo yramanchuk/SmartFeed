@@ -22,5 +22,15 @@ class SFFeed: EVObject, SFFeedProtocol {
         return "\(title) \(articles)"
     }
     
+    required init() {
+        super.init()
+        
+        if (isTestMode) {
+            self.title = "test title"
+            self.feedId = NSUUID().UUIDString
+            self.link = "http://test.com"
+        }
+    }
+    
     
 }

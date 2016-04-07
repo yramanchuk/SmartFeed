@@ -31,10 +31,12 @@ target 'SmartFeed' do
 end
 
 target 'SmartFeedTests' do
+    pod "Kiwi", "~> 2.4.0"
 
 end
 
 target 'SmartFeedUITests' do
+    pod "KIF", "~> 3.4.1"
 
 end
 

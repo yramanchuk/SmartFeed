@@ -59,24 +59,32 @@ class SFBrowseController: UIViewController, UITextFieldDelegate {
         self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
        
         self.urlTextFiled.text = initUrl
-        self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://\(initUrl)")!))
+        if (!isTestMode) {
+            self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://\(initUrl)")!))
+        } else {
+            self.detectedFeeds = [FeedType.kRSS: ["test.com"]]
+        }
         
 
-        self.btnAdd.enabled = false;
+        self.btnAdd.enabled = isTestMode ? true : false;
         self.btnBack.enabled = false;
         self.btnForward.enabled = false;
         
         self.btnAdd.titleLabel?.font = UIFont.fontAwesomeOfSize(15)
         self.btnAdd.setTitle(String.fontAwesomeIconWithName(.RSSSquare), forState: .Normal)
+        self.btnAdd.accessibilityLabel = "add"
 
         self.btnClose.titleLabel?.font = UIFont.fontAwesomeOfSize(15)
         self.btnClose.setTitle(String.fontAwesomeIconWithName(.Close), forState: .Normal)
+        self.btnClose.accessibilityLabel = "close"
 
         self.btnBack.titleLabel?.font = UIFont.fontAwesomeOfSize(15)
         self.btnBack.setTitle(String.fontAwesomeIconWithName(.ArrowLeft), forState: .Normal)
+        self.btnBack.accessibilityLabel = "back"
 
         self.btnForward.titleLabel?.font = UIFont.fontAwesomeOfSize(15)
         self.btnForward.setTitle(String.fontAwesomeIconWithName(.ArrowRight), forState: .Normal)
+        self.btnForward.accessibilityLabel = "forward"
 
         
     }

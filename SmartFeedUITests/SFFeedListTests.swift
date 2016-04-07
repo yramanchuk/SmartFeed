@@ -6,8 +6,26 @@
 //  Copyright © 2016 Yury Ramanchuk. All rights reserved.
 //
 
-import Cocoa
+import KIF
 
 class SFFeedListTests: KIFTestCase {
 
+    var tester : KIFUITestActor {
+        get {
+            return KIFUITestActor(inFile: #file, atLine: #line, delegate: self)
+        }
+    }
+    
+    override func setUp() {
+        super.setUp()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+    func testPresenceOfMyPreciousView() {
+//        tester.tapViewWithAccessibilityLabel("add")
+    }
+    
 }

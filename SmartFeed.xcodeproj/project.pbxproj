@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A06554B71D9741A2656E963 /* Pods_SmartFeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBE722E990D9989D3D08C73 /* Pods_SmartFeedUITests.framework */; };
+		6ABA1F87C88360C6E230B052 /* Pods_SmartFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044BA7FA7C530E394581A05 /* Pods_SmartFeedTests.framework */; };
 		A211193993F97DAF16DEB04A /* Pods_SmartFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C280389EBC5FE9FEAC85A6 /* Pods_SmartFeed.framework */; };
 		CB08C56C1CB162AA00D6C63F /* SFFeedDetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08C56B1CB162AA00D6C63F /* SFFeedDetailListCell.swift */; };
 		CB34D7CA1CA536CF00162CC6 /* SFNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB34D7C91CA536CF00162CC6 /* SFNetworkManager.swift */; };
@@ -50,6 +52,7 @@
 		CB94F4441CAE9AFE006EA9F7 /* SFFeedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94F4431CAE9AFE006EA9F7 /* SFFeedProtocol.swift */; };
 		CB94F4461CAE9B5A006EA9F7 /* SFFeedRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94F4451CAE9B5A006EA9F7 /* SFFeedRealm.swift */; };
 		CBAB29C61CA47D450079F566 /* SFFeedDetailListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB29C51CA47D450079F566 /* SFFeedDetailListController.swift */; };
+		CBC76E181CB5C73A007A9544 /* SFFeedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC76E171CB5C73A007A9544 /* SFFeedListTests.swift */; };
 		CBDE98D41CA44EE8001B89F6 /* SFFeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98D11CA44EE8001B89F6 /* SFFeedListController.swift */; };
 		CBDE98D51CA44EE8001B89F6 /* SFArticleDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98D31CA44EE8001B89F6 /* SFArticleDetailController.swift */; };
 		CBDE98DD1CA465F0001B89F6 /* SFModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98DC1CA465F0001B89F6 /* SFModelManager.swift */; };
@@ -76,6 +79,8 @@
 /* Begin PBXFileReference section */
 		30BD5343AA25C50BF723FD43 /* Pods-SmartFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeed/Pods-SmartFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		83C280389EBC5FE9FEAC85A6 /* Pods_SmartFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A044BA7FA7C530E394581A05 /* Pods_SmartFeedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFeedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D1FA603CB03793FB224AEA /* Pods-SmartFeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeedUITests/Pods-SmartFeedUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB08C56B1CB162AA00D6C63F /* SFFeedDetailListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedDetailListCell.swift; sourceTree = "<group>"; };
 		CB34D7C91CA536CF00162CC6 /* SFNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFNetworkManager.swift; sourceTree = "<group>"; };
 		CB3C08D81CA9D15800B6AE65 /* SmartFeed-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartFeed-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -150,11 +155,16 @@
 		CB94F4431CAE9AFE006EA9F7 /* SFFeedProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedProtocol.swift; sourceTree = "<group>"; };
 		CB94F4451CAE9B5A006EA9F7 /* SFFeedRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedRealm.swift; sourceTree = "<group>"; };
 		CBAB29C51CA47D450079F566 /* SFFeedDetailListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedDetailListController.swift; sourceTree = "<group>"; };
+		CBC76E171CB5C73A007A9544 /* SFFeedListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedListTests.swift; sourceTree = "<group>"; };
 		CBDE98D11CA44EE8001B89F6 /* SFFeedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedListController.swift; sourceTree = "<group>"; };
 		CBDE98D31CA44EE8001B89F6 /* SFArticleDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFArticleDetailController.swift; sourceTree = "<group>"; };
 		CBDE98DC1CA465F0001B89F6 /* SFModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFModelManager.swift; sourceTree = "<group>"; };
 		CBF5EAF41CB2D6E7000CB508 /* SFFeedListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedListCell.swift; sourceTree = "<group>"; };
 		D20CE6A34BAE61D4135E32A0 /* Pods-SmartFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeed/Pods-SmartFeed.release.xcconfig"; sourceTree = "<group>"; };
+		D63480170A5395EFFED1D9AF /* Pods-SmartFeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeedUITests/Pods-SmartFeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DAA5A74225122AB4E7BD1235 /* Pods-SmartFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeedTests/Pods-SmartFeedTests.release.xcconfig"; sourceTree = "<group>"; };
+		E70A8D36CED33BF06F3422E4 /* Pods-SmartFeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFeedTests/Pods-SmartFeedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FBBE722E990D9989D3D08C73 /* Pods_SmartFeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ABA1F87C88360C6E230B052 /* Pods_SmartFeedTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A06554B71D9741A2656E963 /* Pods_SmartFeedUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				83C280389EBC5FE9FEAC85A6 /* Pods_SmartFeed.framework */,
+				A044BA7FA7C530E394581A05 /* Pods_SmartFeedTests.framework */,
+				FBBE722E990D9989D3D08C73 /* Pods_SmartFeedUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,6 +210,10 @@
 			children = (
 				30BD5343AA25C50BF723FD43 /* Pods-SmartFeed.debug.xcconfig */,
 				D20CE6A34BAE61D4135E32A0 /* Pods-SmartFeed.release.xcconfig */,
+				E70A8D36CED33BF06F3422E4 /* Pods-SmartFeedTests.debug.xcconfig */,
+				DAA5A74225122AB4E7BD1235 /* Pods-SmartFeedTests.release.xcconfig */,
+				D63480170A5395EFFED1D9AF /* Pods-SmartFeedUITests.debug.xcconfig */,
+				C2D1FA603CB03793FB224AEA /* Pods-SmartFeedUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -329,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8B428B1CA4335200DEAAC7 /* SmartFeedUITests.swift */,
+				CBC76E171CB5C73A007A9544 /* SFFeedListTests.swift */,
 				CB8B428D1CA4335200DEAAC7 /* Info.plist */,
 			);
 			path = SmartFeedUITests;
@@ -457,9 +476,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB8B42931CA4335200DEAAC7 /* Build configuration list for PBXNativeTarget "SmartFeedTests" */;
 			buildPhases = (
+				0F22253A57C1BD7F0A4FC19B /* Check Pods Manifest.lock */,
 				CB8B42781CA4335200DEAAC7 /* Sources */,
 				CB8B42791CA4335200DEAAC7 /* Frameworks */,
 				CB8B427A1CA4335200DEAAC7 /* Resources */,
+				D5F29E3F77FF71C23C1B9C26 /* Embed Pods Frameworks */,
+				F4D5725ACCB8304C3EC1CC4E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -475,9 +497,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB8B42961CA4335200DEAAC7 /* Build configuration list for PBXNativeTarget "SmartFeedUITests" */;
 			buildPhases = (
+				1EEDB390875BC5C635A01E02 /* Check Pods Manifest.lock */,
 				CB8B42831CA4335200DEAAC7 /* Sources */,
 				CB8B42841CA4335200DEAAC7 /* Frameworks */,
 				CB8B42851CA4335200DEAAC7 /* Resources */,
+				0B5FAF6DDCB03B5C720B1D5D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -561,6 +585,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B5FAF6DDCB03B5C720B1D5D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartFeedUITests/Pods-SmartFeedUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F22253A57C1BD7F0A4FC19B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1EEDB390875BC5C635A01E02 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		49BEE0137D148A0FC37427D2 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -604,6 +673,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5F29E3F77FF71C23C1B9C26 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartFeedTests/Pods-SmartFeedTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4D5725ACCB8304C3EC1CC4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartFeedTests/Pods-SmartFeedTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -668,6 +767,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC76E181CB5C73A007A9544 /* SFFeedListTests.swift in Sources */,
 				CB8B428C1CA4335200DEAAC7 /* SmartFeedUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -821,6 +921,7 @@
 		};
 		CB8B42941CA4335200DEAAC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E70A8D36CED33BF06F3422E4 /* Pods-SmartFeedTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SmartFeedTests/Info.plist;
@@ -833,6 +934,7 @@
 		};
 		CB8B42951CA4335200DEAAC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA5A74225122AB4E7BD1235 /* Pods-SmartFeedTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SmartFeedTests/Info.plist;
@@ -845,6 +947,7 @@
 		};
 		CB8B42971CA4335200DEAAC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D63480170A5395EFFED1D9AF /* Pods-SmartFeedUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SmartFeedUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -857,6 +960,7 @@
 		};
 		CB8B42981CA4335200DEAAC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D1FA603CB03793FB224AEA /* Pods-SmartFeedUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SmartFeedUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

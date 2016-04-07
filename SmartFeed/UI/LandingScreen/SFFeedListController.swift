@@ -30,7 +30,7 @@ class SFFeedListController: UITableViewController, UINavigationBarDelegate {
         let attributesEdit = [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!
         editButton.setTitleTextAttributes(attributesEdit, forState: .Normal)
         editButton.title = String.fontAwesomeIconWithName(.Gear)
-
+        editButton.accessibilityLabel = "edit"
         
         self.navigationItem.leftBarButtonItem = editButton //self.editButtonItem()
 
@@ -40,6 +40,9 @@ class SFFeedListController: UITableViewController, UINavigationBarDelegate {
         let attributes = [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!
         addButton.setTitleTextAttributes(attributes, forState: .Normal)
         addButton.title = String.fontAwesomeIconWithName(.PlusSquare)
+        addButton.accessibilityLabel = "add"
+        
+        print("arguments \(NSProcessInfo.processInfo().arguments)") 
         
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {

@@ -25,22 +25,31 @@ class SFNetworkManager {
     
 //    func feelFeed<T: EVObject>(type: T.Type, url: String, completionHandler: (result: SFFeed?, error: NSError?) -> Void) {
     func feelFeedRss(url: String, completionHandler: (result: SFFeed?, error: NSError?) -> Void) {
-        Alamofire.request(.GET, url).responseObjectCustom
-            {(result: Result<SFRss, NSError>) -> Void in
-                let feed = result.value?.channel
-                if result.error == nil {
-                    
-                    if feed!.link == nil {
-                        feed?.link = url
+        debugPrint("test: \(isTestMode)")
+        
+        if !isTestMode {
+            Alamofire.request(.GET, url).responseObjectCustom
+                {(result: Result<SFRss, NSError>) -> Void in
+                    let feed = result.value?.channel
+                    if result.error == nil {
+                        
+                        if feed!.link == nil {
+                            feed?.link = url
+                        }
+                        
+                        //can improve with async; use completion block as param
+                        feed!.feedId = SFModelManager.sharedInstatnce.updateFeedSync(feed!)
+                        
                     }
                     
-                    //can improve with async; use completion block as param
-                    feed!.feedId = SFModelManager.sharedInstatnce.updateFeedSync(feed!)
-                    
-                }
-                
-                completionHandler(result: feed, error: result.error)
+                    completionHandler(result: feed, error: result.error)
+            }
+        } else {
+            let feed = SFFeed()
+            completionHandler(result: feed, error: nil)
+            
         }
+        
         
     }
 
