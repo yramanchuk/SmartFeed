@@ -12,7 +12,7 @@ import EVReflection
 import XMLDictionary
 
 class SFNetworkManager {
-    static let sharedInstatnce = SFNetworkManager()
+    static let sharedInstance = SFNetworkManager()
 
     
     func feelFeedAtom(url: String, completionHandler: (result: SFFeed?, error: NSError?) -> Void) {
@@ -38,7 +38,7 @@ class SFNetworkManager {
                         }
                         
                         //can improve with async; use completion block as param
-                        feed!.feedId = SFModelManager.sharedInstatnce.updateFeedSync(feed!)
+                        feed!.feedId = SFModelManager.sharedInstance.updateFeedSync(feed!)
                         
                     }
                     

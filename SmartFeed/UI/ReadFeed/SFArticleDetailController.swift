@@ -20,7 +20,7 @@ class SFArticleDetailController: UIViewController {
         didSet {
             // Update the view.
             self.configureView()
-            SFModelManager.sharedInstatnce.setReadArticleSync(article.linkURL!, isNew: false)
+            SFModelManager.sharedInstance.setReadArticleSync(article.linkURL!, isNew: false)
         }
     }
 

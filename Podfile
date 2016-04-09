@@ -8,11 +8,14 @@ target 'SmartFeed' do
     pod 'RealmSwift', '~> 0.98.5'
 
     pod 'Alamofire', '~> 3.3.0'
+
 #    pod 'ObjectMapper', '1.1.5'
 #    pod 'AlamofireObjectMapper', '~> 2.1.2'
 #    pod 'AlamofireImage', '~> 2.2.0'
 
     pod 'AlamofireXmlToObjects', '1.0.1'
+    pod 'EVReflection', '2.23.0'
+    pod 'XMLDictionary', '1.4'
 #    pod 'AlamofireNetworkActivityIndicator', '~> 1.0' #XCode 7.3
 
 #pod 'Feeder', '~> 0.1'
@@ -31,7 +34,8 @@ target 'SmartFeed' do
 end
 
 target 'SmartFeedTests' do
-    pod "Kiwi", "~> 2.4.0"
+    #   pod "Kiwi", "~> 2.4.0"
+    pod 'RealmSwift', '~> 0.98.5'
 
 end
 

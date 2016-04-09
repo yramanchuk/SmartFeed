@@ -31,6 +31,7 @@
 		CB3C091B1CA9D16900B6AE65 /* HTMLTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C09051CA9D16900B6AE65 /* HTMLTokenizer.m */; };
 		CB3C091C1CA9D16900B6AE65 /* HTMLTreeEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C09081CA9D16900B6AE65 /* HTMLTreeEnumerator.m */; };
 		CB3C091D1CA9D16900B6AE65 /* NSString+HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3C090A1CA9D16900B6AE65 /* NSString+HTMLEntities.m */; };
+		CB7ADE211CB9775E0061BFDB /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = CB7ADE201CB9775E0061BFDB /* test.html */; };
 		CB8AB5D11CAC260A00639999 /* SFBrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB5D01CAC260A00639999 /* SFBrowseController.swift */; };
 		CB8AB5D31CAD60F000639999 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = CB8AB5D21CAD60F000639999 /* script.js */; };
 		CB8AB5D51CAD6EDB00639999 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB5D41CAD6EDB00639999 /* Constants.swift */; };
@@ -128,6 +129,7 @@
 		CB3C09081CA9D16900B6AE65 /* HTMLTreeEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTreeEnumerator.m; sourceTree = "<group>"; };
 		CB3C09091CA9D16900B6AE65 /* NSString+HTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTMLEntities.h"; sourceTree = "<group>"; };
 		CB3C090A1CA9D16900B6AE65 /* NSString+HTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTMLEntities.m"; sourceTree = "<group>"; };
+		CB7ADE201CB9775E0061BFDB /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		CB8AB5D01CAC260A00639999 /* SFBrowseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFBrowseController.swift; sourceTree = "<group>"; };
 		CB8AB5D21CAD60F000639999 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		CB8AB5D41CAD6EDB00639999 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -293,6 +295,14 @@
 			path = HTMLReader;
 			sourceTree = "<group>";
 		};
+		CB7ADE1F1CB9775E0061BFDB /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				CB7ADE201CB9775E0061BFDB /* test.html */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
 		CB8B425D1CA4335200DEAAC7 = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +347,7 @@
 		CB8B427F1CA4335200DEAAC7 /* SmartFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				CB7ADE1F1CB9775E0061BFDB /* Samples */,
 				CB8B42801CA4335200DEAAC7 /* SmartFeedTests.swift */,
 				CB8B42821CA4335200DEAAC7 /* Info.plist */,
 			);
@@ -572,6 +583,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7ADE211CB9775E0061BFDB /* test.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,7 @@ class SFFeedDetailListController: UITableViewController {
         loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
 
-            SFNetworkManager.sharedInstatnce.feelFeedRss((self?.selectedFeed?.link)!, completionHandler: { (result, error) in
+            SFNetworkManager.sharedInstance.feelFeedRss((self?.selectedFeed?.link)!, completionHandler: { (result, error) in
                 if error == nil {
                     self?.selectedFeed = result
                     self?.tableView.reloadData()

@@ -40,37 +40,39 @@ class SmartFeedUITests: XCTestCase {
     func testBrowseDismissal() {
         
         let app = XCUIApplication()
-        app.navigationBars["Smart Feed"].buttons["add"].tap()
+        app.navigationBars.elementBoundByIndex(0).buttons["add"].tap()
         app.buttons["close"].tap()
         
     }
     
     
     func testAddingFeed() {
-        let testFeedTitle = "test title"
         
         let app = XCUIApplication()
         let tablesQuery = app.tables
-
+        let navBar = app.navigationBars.elementBoundByIndex(0)
+        
         XCTAssertEqual(tablesQuery.cells.count, 0)
 
-        app.navigationBars["Smart Feed"].buttons["add"].tap()
+        navBar.buttons["add"].tap()
         app.buttons["add"].tap()
         XCTAssertEqual(tablesQuery.cells.count, 1)
         
-        let cellTitle = app.tables.childrenMatchingType(.Cell).elementBoundByIndex(0).staticTexts[testFeedTitle].label
-        XCTAssertEqual(cellTitle, testFeedTitle)
+        let cellTitle = app.tables.childrenMatchingType(.Cell).elementBoundByIndex(0).staticTexts.element.label
+        XCTAssertEqual(cellTitle, "test title")
 
+        let cell = tablesQuery.cells.elementBoundByIndex(0)
+        cell.tap()
+        navBar.buttons["Back"].tap()
         
-        tablesQuery.cells.elementBoundByIndex(0).tap()
-        app.navigationBars[testFeedTitle].buttons["Back"].tap()
-        
-        let editButton = app.navigationBars["Smart Feed"].buttons["edit"]
+        let editButton = navBar.buttons["edit"]
         editButton.tap()
-        tablesQuery.cells.buttons["Delete \(testFeedTitle)"].tap()
-        tablesQuery.cells.buttons["Delete"].tap()
+        cell.buttons.matchingPredicate(NSPredicate(format: "label BEGINSWITH 'Delete'")).element.tap()
+        cell.buttons["Delete"].tap()
         editButton.tap()
+        XCTAssertEqual(cell.exists, false)
         XCTAssertEqual(tablesQuery.cells.count, 0)
     }
+    
     
 }

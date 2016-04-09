@@ -9,7 +9,7 @@
 import RealmSwift
 
 class SFModelManager {
-    static let sharedInstatnce = SFModelManager()
+    static let sharedInstance = SFModelManager()
     
     func getAllFeeds() -> [SFFeedProtocol] {
 
@@ -33,7 +33,8 @@ class SFModelManager {
         return realm.objects(SFFeedRealm).filter("link == '\(feedUrl)'").first as? SFFeedProtocol
     }
 
-    
+    /// only updates updates feed child articles
+    /// this methods must be optimized not to create new feed realm object
     func updateFeedSync(feed: SFFeedProtocol) -> String {
         
         let realm = self.realm()
@@ -83,7 +84,7 @@ class SFModelManager {
     }
     
     
-    func deleteFeedAsync(feedID: String!) -> Void {
+    func deleteFeedAsync(feedID: String!, complitionHandler: (() -> Void)?) -> Void {
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             let realm = self.realm()
@@ -95,13 +96,16 @@ class SFModelManager {
                     realm.delete(feedRealm.articlesDB)
                     realm.delete(feedRealm)
                 }
+                if complitionHandler != nil {
+                    complitionHandler!()
+                }
             }
         }
     }
     
     func realm() -> Realm {
         if isTestMode {
-            return try! Realm(configuration: Realm.Configuration(path: nil, inMemoryIdentifier: TEST_MODE, encryptionKey: nil, readOnly: false, schemaVersion: 0, migrationBlock: nil, objectTypes: nil))
+            return try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: TEST_MODE))
         }
         return try! Realm()
     }

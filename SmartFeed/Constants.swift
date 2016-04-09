@@ -11,5 +11,7 @@ struct FeedType {
     static let kAtom = "atom"
 }
 let TEST_MODE = "TEST"
-let isTestMode = NSProcessInfo.processInfo().arguments.contains(TEST_MODE)
+
+//init whith compilation constant different for targets
+var isTestMode = NSProcessInfo.processInfo().arguments.contains(TEST_MODE)
 //let isTestMode = NSProcessInfo.processInfo().environment["-testMode"] != nil
