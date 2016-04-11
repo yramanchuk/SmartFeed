@@ -8,6 +8,7 @@
 
 import UIKit
 import DGElasticPullToRefresh
+//import SafariServices
 
 class SFFeedDetailListController: UITableViewController {
 
@@ -107,6 +108,13 @@ class SFFeedDetailListController: UITableViewController {
     }
     */
 
+    
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let object = selectedFeed?.articles[indexPath.row]
+//        let controller = SFSafariViewController.init(URL: NSURL(string: (object?.linkURL)!)!, entersReaderIfAvailable: true)
+//        self.navigationController?.pushViewController(controller, animated: true)
+//    }
+    
     
     // MARK: - Navigation
 
