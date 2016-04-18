@@ -30,7 +30,7 @@ class SFFeedListController: UITableViewController, UINavigationBarDelegate {
         let attributesEdit = [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!
         editButton.setTitleTextAttributes(attributesEdit, forState: .Normal)
         editButton.title = String.fontAwesomeIconWithName(.Gear)
-
+        editButton.accessibilityLabel = "edit"
         
         self.navigationItem.leftBarButtonItem = editButton //self.editButtonItem()
 
@@ -40,6 +40,9 @@ class SFFeedListController: UITableViewController, UINavigationBarDelegate {
         let attributes = [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!
         addButton.setTitleTextAttributes(attributes, forState: .Normal)
         addButton.title = String.fontAwesomeIconWithName(.PlusSquare)
+        addButton.accessibilityLabel = "add"
+        
+        print("arguments \(NSProcessInfo.processInfo().arguments)") 
         
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
@@ -47,7 +50,7 @@ class SFFeedListController: UITableViewController, UINavigationBarDelegate {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? SFArticleDetailController
         }
         
-        let allFeeds = SFModelManager.sharedInstatnce.getAllFeeds()
+        let allFeeds = SFModelManager.sharedInstance.getAllFeeds()
         for feed in allFeeds {
             insertObject(nil, object: feed)
         }
@@ -56,12 +59,12 @@ class SFFeedListController: UITableViewController, UINavigationBarDelegate {
         loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
             
-            let allFeeds = SFModelManager.sharedInstatnce.getAllFeeds()
+            let allFeeds = SFModelManager.sharedInstance.getAllFeeds()
             var counter = allFeeds.count - 1
             if counter > 0 {
                 for index in 0...counter {
                     let feed = allFeeds[index]
-                    SFNetworkManager.sharedInstatnce.feelFeedRss((feed.link)!, completionHandler: { (result, error) in
+                    SFNetworkManager.sharedInstance.feelFeedRss((feed.link)!, completionHandler: { (result, error) in
                         if error == nil {
                             self!.objects[index] = result!
                             counter -= 1
@@ -106,7 +109,7 @@ class SFFeedListController: UITableViewController, UINavigationBarDelegate {
             for (type, list) in arg {
                 if (type == FeedType.kRSS) {
                     for url in list {
-                        SFNetworkManager.sharedInstatnce.feelFeedRss(url) { (result, error) in
+                        SFNetworkManager.sharedInstance.feelFeedRss(url) { (result, error) in
                             if error == nil {
                                 self.insertObject(sender, object: result!)
                             }
@@ -114,7 +117,7 @@ class SFFeedListController: UITableViewController, UINavigationBarDelegate {
                     }
                 } else if (type == FeedType.kAtom) {
                     for url in list {
-                        SFNetworkManager.sharedInstatnce.feelFeedAtom(url) { (result, error) in
+                        SFNetworkManager.sharedInstance.feelFeedAtom(url) { (result, error) in
                             if error == nil {
                                 self.insertObject(sender, object: result!)
                             }
@@ -177,7 +180,7 @@ class SFFeedListController: UITableViewController, UINavigationBarDelegate {
         if editingStyle == .Delete {
             let deletedObject = objects.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            SFModelManager.sharedInstatnce.deleteFeedAsync(deletedObject.feedId)
+            SFModelManager.sharedInstance.deleteFeedAsync(deletedObject.feedId, complitionHandler: nil)
             
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.

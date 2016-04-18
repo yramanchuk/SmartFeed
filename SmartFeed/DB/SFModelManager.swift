@@ -9,11 +9,11 @@
 import RealmSwift
 
 class SFModelManager {
-    static let sharedInstatnce = SFModelManager()
+    static let sharedInstance = SFModelManager()
     
     func getAllFeeds() -> [SFFeedProtocol] {
 
-        let realm = try! Realm()
+        let realm = self.realm()
         let feeds = realm.objects(SFFeedRealm)
 
         return Array(feeds)
@@ -21,22 +21,23 @@ class SFModelManager {
 
     func getFeed(feedID: String!) -> SFFeedProtocol? {
         
-        let realm = try! Realm()
+        let realm = self.realm()
         
         return realm.objectForPrimaryKey(SFFeedRealm.self, key: feedID) as? SFFeedProtocol
     }
 
     func getFeed(byLink feedUrl: String!) -> SFFeedProtocol? {
         
-        let realm = try! Realm()
+        let realm = self.realm()
         
         return realm.objects(SFFeedRealm).filter("link == '\(feedUrl)'").first as? SFFeedProtocol
     }
 
-    
+    /// only updates updates feed child articles
+    /// this methods must be optimized not to create new feed realm object
     func updateFeedSync(feed: SFFeedProtocol) -> String {
         
-        let realm = try! Realm()
+        let realm = self.realm()
         var feedId: String!
         
         if let createdFeed = self.getFeed(byLink: feed.link) as! SFFeedRealm! {
@@ -73,7 +74,7 @@ class SFModelManager {
     }
     
     func setReadArticleSync(articleUrl: String, isNew: Bool) -> Void {
-        let realm = try! Realm()
+        let realm = self.realm()
         let articles = realm.objects(SFArticleRealm).filter("linkURL == '\(articleUrl)'")
         try! realm.write {
             articles.setValue(isNew, forKeyPath: "isNew")
@@ -83,10 +84,10 @@ class SFModelManager {
     }
     
     
-    func deleteFeedAsync(feedID: String!) -> Void {
+    func deleteFeedAsync(feedID: String!, complitionHandler: (() -> Void)?) -> Void {
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let realm = try! Realm()
+            let realm = self.realm()
 
             if let feedRealm = realm.objectForPrimaryKey(SFFeedRealm.self, key: feedID) {
                 
@@ -95,8 +96,18 @@ class SFModelManager {
                     realm.delete(feedRealm.articlesDB)
                     realm.delete(feedRealm)
                 }
+                if complitionHandler != nil {
+                    complitionHandler!()
+                }
             }
         }
+    }
+    
+    func realm() -> Realm {
+        if isTestMode {
+            return try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: TEST_MODE))
+        }
+        return try! Realm()
     }
 
 }

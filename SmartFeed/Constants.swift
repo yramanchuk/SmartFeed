@@ -10,3 +10,8 @@ struct FeedType {
     static let kRSS = "rss"
     static let kAtom = "atom"
 }
+let TEST_MODE = "TEST"
+
+//init whith compilation constant different for targets
+var isTestMode = NSProcessInfo.processInfo().arguments.contains(TEST_MODE)
+//let isTestMode = NSProcessInfo.processInfo().environment["-testMode"] != nil
