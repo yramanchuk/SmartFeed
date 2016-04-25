@@ -52,6 +52,7 @@
 		CB94F4421CAE9571006EA9F7 /* SFArticleRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94F4411CAE9571006EA9F7 /* SFArticleRealm.swift */; };
 		CB94F4441CAE9AFE006EA9F7 /* SFFeedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94F4431CAE9AFE006EA9F7 /* SFFeedProtocol.swift */; };
 		CB94F4461CAE9B5A006EA9F7 /* SFFeedRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94F4451CAE9B5A006EA9F7 /* SFFeedRealm.swift */; };
+		CB9539631CCE5DF1008F1B69 /* read_style.js in Resources */ = {isa = PBXBuildFile; fileRef = CB9539621CCE5DF1008F1B69 /* read_style.js */; };
 		CBAB29C61CA47D450079F566 /* SFFeedDetailListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB29C51CA47D450079F566 /* SFFeedDetailListController.swift */; };
 		CBC76E181CB5C73A007A9544 /* SFFeedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC76E171CB5C73A007A9544 /* SFFeedListTests.swift */; };
 		CBDE98D41CA44EE8001B89F6 /* SFFeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDE98D11CA44EE8001B89F6 /* SFFeedListController.swift */; };
@@ -156,6 +157,7 @@
 		CB94F4411CAE9571006EA9F7 /* SFArticleRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFArticleRealm.swift; sourceTree = "<group>"; };
 		CB94F4431CAE9AFE006EA9F7 /* SFFeedProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedProtocol.swift; sourceTree = "<group>"; };
 		CB94F4451CAE9B5A006EA9F7 /* SFFeedRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedRealm.swift; sourceTree = "<group>"; };
+		CB9539621CCE5DF1008F1B69 /* read_style.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = read_style.js; sourceTree = "<group>"; };
 		CBAB29C51CA47D450079F566 /* SFFeedDetailListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedDetailListController.swift; sourceTree = "<group>"; };
 		CBC76E171CB5C73A007A9544 /* SFFeedListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedListTests.swift; sourceTree = "<group>"; };
 		CBDE98D11CA44EE8001B89F6 /* SFFeedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFeedListController.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				CB8B42741CA4335200DEAAC7 /* LaunchScreen.storyboard */,
 				CB8B42771CA4335200DEAAC7 /* Info.plist */,
 				CB8AB5D21CAD60F000639999 /* script.js */,
+				CB9539621CCE5DF1008F1B69 /* read_style.js */,
 				CB3C08D81CA9D15800B6AE65 /* SmartFeed-Bridging-Header.h */,
 			);
 			path = SmartFeed;
@@ -575,6 +578,7 @@
 				CB8B42761CA4335200DEAAC7 /* LaunchScreen.storyboard in Resources */,
 				CB8AB5D31CAD60F000639999 /* script.js in Resources */,
 				CB8B42731CA4335200DEAAC7 /* Assets.xcassets in Resources */,
+				CB9539631CCE5DF1008F1B69 /* read_style.js in Resources */,
 				CB8B42711CA4335200DEAAC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

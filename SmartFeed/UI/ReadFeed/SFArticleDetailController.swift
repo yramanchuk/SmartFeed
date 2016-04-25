@@ -59,7 +59,7 @@ class SFArticleDetailController: UIViewController {
     func initWebView() {
         
         let contentController = WKUserContentController();
-//        contentController.addUserScript(self.getUserScript("readability"))
+        contentController.addUserScript(self.getUserScript("read_style"))
         
         let config = WKWebViewConfiguration()
         config.userContentController = contentController
@@ -71,26 +71,27 @@ class SFArticleDetailController: UIViewController {
         let height = NSLayoutConstraint(item: self.webView!, attribute: .Height, relatedBy: .Equal, toItem: self.containerView, attribute: .Height, multiplier: 1, constant: 0)
         let width = NSLayoutConstraint(item: self.webView!, attribute: .Width, relatedBy: .Equal, toItem: self.containerView, attribute: .Width, multiplier: 1, constant: 0)
         self.containerView.addConstraints([height, width])
+        
 
     }
     
-//    func getUserScript(jsFileName: String) -> WKUserScript {
-//        let path = NSBundle.mainBundle().pathForResource(jsFileName, ofType: "js")
-//        var scriptData: String
-//        do {
-//            scriptData = try String(contentsOfFile: path!)
-//        } catch {
-//            scriptData = ""
-//        }
-//        
-//        let userScript = WKUserScript(
-//            source: scriptData as String,
-//            injectionTime: WKUserScriptInjectionTime.AtDocumentEnd,
-//            forMainFrameOnly: true
-//        )
-//
-//        return userScript
-//    }
+    func getUserScript(jsFileName: String) -> WKUserScript {
+        let path = NSBundle.mainBundle().pathForResource(jsFileName, ofType: "js")
+        var scriptData: String
+        do {
+            scriptData = try String(contentsOfFile: path!)
+        } catch {
+            scriptData = ""
+        }
+        
+        let userScript = WKUserScript(
+            source: scriptData as String,
+            injectionTime: WKUserScriptInjectionTime.AtDocumentStart,
+            forMainFrameOnly: true
+        )
+
+        return userScript
+    }
     
     deinit {
         self.webView!.removeObserver(self, forKeyPath: "loading", context: nil)
